@@ -31,12 +31,16 @@ ion-icon{
   padding:10px;
 }
 
-ion-header{
-  border: 2px solid gray;
+ion-toolbar{
+  border: 1px solid gray;
   border-radius: 10px;
   width:90%;
   left:5%;
   right:5%;
   top:1.5%;
-  box-shadow: 0 0 4px #000;
+  box-shadow: 0 0 2px #000;
+}
+
+ion-button{
+	text-shadow: 0 0 2px #000;
 }

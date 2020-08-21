@@ -1,0 +1,27 @@
+.image-card{
+	height: 30%;
+	background-color: lightgray;
+}
+
+.camera{
+  position: absolute; /* postulat de départ */
+  top: 50%; left: 50%; /* à 50%/50% du parent référent */
+  transform: translate(-50%, -50%);
+  color: black; 
+  text-shadow: 0 0 2px #000;
+}
+
+ion-input{
+  border: 0.5px solid lightgray;
+  border-radius: 10px;
+  width:90%;
+  height:12%;
+  left:5%;
+  right:5%;
+  top:1.5%;
+  box-shadow: 0 0 3.5px #000;
+  text-indent: 15px;
+}
+
+
+

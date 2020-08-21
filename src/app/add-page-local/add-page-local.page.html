@@ -1,9 +1,30 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>add-page-local</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
+	<ion-card class="image-card">
+		<ion-buttons>
+	  <ion-icon name="arrow-back-outline" slot="start" style="color: white"></ion-icon>
+	</ion-buttons>
+
+	<ion-buttons class="camera">
+	  <ion-icon name="camera-outline" slot="center" style=" font-size: 64px "></ion-icon>
+	</ion-buttons>
+
+	</ion-card>
+
+ <ion-content>
+
+<ion-input placeholder="Titre"></ion-input>
+
+<br>
+<ion-input placeholder="Description"></ion-input>
+
+<br>
+<ion-input placeholder="Localisation">
+	<ion-icon name="location" style="position: absolute; right: 3%"></ion-icon>
+</ion-input>
+
+<br><br>
+<center>
+<ion-button align="center">Ajouter</ion-button>
+</center>
 
 </ion-content>
