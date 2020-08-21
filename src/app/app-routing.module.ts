@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
@@ -32,7 +31,7 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-=======
+
 import { NgModule } from '@angular/core';
 
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
@@ -53,7 +52,6 @@ const routes: Routes = [
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
 
-  
 ];
 
 @NgModule({
@@ -63,4 +61,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
->>>>>>> a4fb22c78db13d9cf945cfd23d59299c20b9aea4
+
