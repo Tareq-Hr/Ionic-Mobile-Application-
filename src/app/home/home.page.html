@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-icon name="menu-outline" slot="start"></ion-icon>
     <ion-input type="text" placeholder="Chercher une place"></ion-input>
-    <ion-icon name="person-circle" slot="end"></ion-icon>
+    <ion-icon name="search-outline" slot="end"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
@@ -16,7 +16,7 @@
  <div>
   <img src="assets/grottes.png" alt="Grottes" style="width:100%;">
   <strong class="top-left">Grottes</strong>
-  <button class="bottom-left"><strong>Voir plus</strong></button>
+  <button class="bottom-left" [routerLink]= "['/liste-places']"><strong>Voir plus</strong></button>
 </div> 
 </ion-card>
 
@@ -24,17 +24,16 @@
  <div>
   <img src="assets/parcks.png" alt="Parcks" style="width:100%;">
   <strong class="top-left">Parcks</strong>
-  <button class="bottom-left"><strong>Voir plus</strong></button>
+  <button class="bottom-left" [routerLink]= "['/liste-places']"><strong>Voir plus</strong></button>
 </div> 
 </ion-card>
 
 <ion-card>
 
  <div>
-
   <img src="assets/monuments.png" alt="Monuments" style="width:100%;">
   <strong class="top-left">Monuments Historiques</strong>
-  <button class="bottom-left" [routerLink]= "['/home']"><strong>Voir plus</strong></button>
+  <button class="bottom-left" [routerLink]= "['/liste-places']"><strong>Voir plus</strong></button>
 </div>
 </ion-card>
 
