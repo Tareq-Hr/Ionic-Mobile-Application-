@@ -11,9 +11,14 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  },  {
+  },
+  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'liste-places',
+    loadChildren: () => import('./liste-places/liste-places.module').then( m => m.ListePlacesPageModule)
   },
 
   
