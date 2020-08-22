@@ -36,6 +36,14 @@ const routes: Routes = [
     path: 'localisation',
     loadChildren: () => import('./localisation/localisation.module').then( m => m.LocalisationPageModule)
   },
+  {
+    path: 'pharmacie',
+    loadChildren: () => import('./pharmacie/pharmacie.module').then( m => m.PharmaciePageModule)
+  },
+  {
+    path: 'transports',
+    loadChildren: () => import('./transports/transports.module').then( m => m.TransportsPageModule)
+  },
 
   
 ];
