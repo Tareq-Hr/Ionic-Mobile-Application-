@@ -35,7 +35,19 @@ const routes: Routes = [
   {
     path: 'localisation',
     loadChildren: () => import('./localisation/localisation.module').then( m => m.LocalisationPageModule)
+  },  {
+    path: 'inscription',
+    loadChildren: () => import('./inscription/inscription.module').then( m => m.InscriptionPageModule)
   },
+  {
+    path: 'liste',
+    loadChildren: () => import('./liste/liste.module').then( m => m.ListePageModule)
+  },
+  {
+    path: 'inscription',
+    loadChildren: () => import('./inscription/inscription.module').then( m => m.InscriptionPageModule)
+  },
+
 
   
 ];
