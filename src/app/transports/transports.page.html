@@ -1,0 +1,39 @@
+<ion-header translucent="false">
+  <ion-toolbar>
+    <ion-icon name="menu-outline" slot="start"></ion-icon>
+    <ion-input type="text" placeholder="Chercher une place"></ion-input>
+    <ion-icon name="search-outline" slot="end"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+<script type="javascript">
+function gare(){
+  document.getElementById(id).style.display;
+}
+</script>
+<ion-content>
+  <br>
+  <strong>
+    <ion-text color="primary">Transports</ion-text>
+  </strong>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-img src="assets/bus.PNG" onmouseover="gare();"></ion-img>
+        <ion-div id="id" style="display: none;">
+          <ion-img src="assets/bus.PNG"></ion-img>
+        </ion-div>
+      </ion-col>
+      <ion-col>
+        <ion-img src="assets/bus.PNG"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-img src="assets/train.PNG"></ion-img>
+      </ion-col>
+      <ion-col>
+        <ion-img src="assets/bus.PNG"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
