@@ -1,9 +1,52 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>menu</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-app class="ios ion-page hydrated">
+  <ion-menu side="start" content-id="main-content" role="navigation" class="ios menu-type-overlay menu-enabled menu-side-start hydrated">
+        <ion-img src="assets/Image 13.png"></ion-img>
+    <ion-content class="ios hydrated" style="--offset-top: 0px; --offset-bottom: 0px;">
+      <ion-list class="ios list-ios hydrated">
+        <ion-item class="item ios in-list ion-focusable hydrated item-label">
+          <ion-icon name="home-outline" slot="start" role="img" class="ios hydrated" aria-label="mail"></ion-icon>
+          <ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated">Home</ion-label>
+        </ion-item>
+        <ion-item class="item ios in-list ion-focusable hydrated item-label">
+          <ion-icon name="restaurant-outline" slot="start" role="img" class="ios hydrated" aria-label="paper plane"></ion-icon>
+          <ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated">Réstaurant</ion-label>
+        </ion-item>
+        <ion-item class="item ios in-list ion-focusable hydrated item-label">
+          <ion-icon name="bed-outline" slot="start" role="img" class="ios hydrated" aria-label="heart"></ion-icon>
+          <ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated">Hôtel</ion-label>
+        </ion-item>
+        <ion-item class="item ios in-list ion-focusable hydrated item-label">
+          <ion-icon name="partly-sunny-outline" slot="start" role="img" class="ios hydrated" aria-label="archive"></ion-icon>
+          <ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated">Météo</ion-label>
+        </ion-item>
+        <ion-item class="item ios in-list ion-focusable hydrated item-label">
+          <ion-icon name="location-outline" slot="start" role="img" class="ios hydrated" aria-label="trash"></ion-icon>
+          <ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated">Localisation</ion-label>
+        </ion-item>
+        <ion-item class="item ios in-list ion-focusable hydrated item-label">
+          <ion-icon name="medkit-outline" slot="start" role="img" class="ios hydrated" aria-label="warning"></ion-icon>
+          <ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated">Pharmacie</ion-label>
+        </ion-item>
+        <ion-item class="item ios in-list ion-focusable hydrated item-label">
+          <ion-icon name="subway-outline" slot="start" role="img" class="ios hydrated" aria-label="warning"></ion-icon>
+          <ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated">Transport</ion-label>
+        </ion-item>
+        <ion-item class="item ios in-list ion-focusable hydrated item-label">
+          <ion-icon name="images-outline" slot="start" role="img" class="ios hydrated" aria-label="warning"></ion-icon>
+          <ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated">Ajouter Place</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
 
-<ion-content>
-
-</ion-content>
+  <div class="ion-page menu-content menu-content-overlay" id="main-content">
+      <ion-toolbar class="in-toolbar ios toolbar-title-default hydrated">
+        <ion-buttons slot="start" class="buttons-first-slot sc-ion-buttons-ios-h sc-ion-buttons-ios-s ios hydrated">
+          <ion-menu-button class="ios button in-toolbar ion-activatable ion-focusable hydrated"></ion-menu-button>
+        </ion-buttons>
+        <ion-input type="text" placeholder="Chercher une place"></ion-input>
+        <ion-icon name="search-outline" slot="end"></ion-icon>
+      </ion-toolbar>
+  
+  </div>
+</ion-app>
