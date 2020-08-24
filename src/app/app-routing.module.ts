@@ -24,6 +24,25 @@ const routes: Routes = [
     path: 'add-page-local',
     loadChildren: () => import('./add-page-local/add-page-local.module').then( m => m.AddPageLocalPageModule)
   },
+  
+  {
+    path: 'menu',
+    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
+  },
+ 
+  {
+    path: 'liste',
+    loadChildren: () => import('./liste/liste.module').then( m => m.ListePageModule)
+  },
+  {
+    path: 'inscription',
+    loadChildren: () => import('./inscription/inscription.module').then( m => m.InscriptionPageModule)
+  },
+
+  {
+    path: 'add-page-local',
+    loadChildren: () => import('./add-page-local/add-page-local.module').then( m => m.AddPageLocalPageModule)
+  },
   {
     path: 'localisation',
     loadChildren: () => import('./localisation/localisation.module').then( m => m.LocalisationPageModule)
@@ -40,6 +59,9 @@ const routes: Routes = [
     path: 'meteo',
     loadChildren: () => import('./meteo/meteo.module').then( m => m.MeteoPageModule)
   },
+
+  
+];
 
 
 
