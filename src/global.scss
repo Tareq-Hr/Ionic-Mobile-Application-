@@ -27,7 +27,7 @@
 
 
 ion-icon{
-  font-size:32px;
+  font-size:24px;
   padding:10px;
   filter: drop-shadow(0 0 0.5px #000);
 }
@@ -96,7 +96,7 @@ ion-text {
   padding: 10px;
   font-size: 130%;
   font-style: bold;
-  text-shadow: 0 0 1px #000;
+  text-shadow: 0 0 0.5px #000;
 }
 
 .image-card{
@@ -110,3 +110,4 @@ ion-text {
 	height: 80%;
 	background-color: lightgray;
 }
+
