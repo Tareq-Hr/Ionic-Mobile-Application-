@@ -1,0 +1,67 @@
+ <ion-toolbar>
+    <ion-icon name="menu-outline" slot="start"></ion-icon>
+    <ion-input type="text" placeholder="Chercher une place"></ion-input>
+    <ion-icon name="search-outline" slot="end"></ion-icon>
+ </ion-toolbar>
+
+
+<ion-content [fullscreen]="true" >
+      <ion-list-header> 
+  <strong>
+    <ion-text color="primary">Bab boudir</ion-text>
+  </strong>
+	  </ion-list-header><br>
+
+        <ion-item lines="none">
+          <img  src="assets/login.jpg" > 
+         <ion-label class="f">
+      
+           <h2 style="color: green">Ville: </h2>
+         	 <p style="color: black" >taza </p>
+        
+         <h2 style="color: green">Pays: </h2>
+         	 <p style="color: black" >Maroc </p>
+       
+         </ion-label>
+        </ion-item>
+        <ion-list-header> 
+        <strong>
+           <ion-text color="primary">Description:</ion-text>
+        </strong>
+        </ion-list-header> 
+
+    <ion-item class="m" lines="none" >
+        <ion-label class="ion-text-wrap">
+      Multi-line text that should wrap 
+        </ion-label>
+    </ion-item>
+
+    <ion-list-header> 
+        <strong>
+           <ion-text color="primary">Images:</ion-text>
+        </strong>
+        </ion-list-header> 
+        <ion-grid>
+            <ion-row>
+          <ion-col col-6>
+            <img  src="assets/login.jpg" >
+          </ion-col>
+          <ion-col>
+            <img  src="assets/login.jpg" >
+          </ion-col>
+          <ion-col>
+            <img  src="assets/login.jpg" >
+          </ion-col>
+           <ion-col>
+            <img  src="assets/login.jpg" >
+          </ion-col>
+           <ion-col>
+            <img  src="assets/login.jpg" >
+          </ion-col>
+       
+        </ion-row>
+      </ion-grid>
+
+
+
+</ion-content>

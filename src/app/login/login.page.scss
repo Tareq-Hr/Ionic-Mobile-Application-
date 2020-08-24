@@ -1,0 +1,74 @@
+section{
+	width : 100%;
+	height: 100%;
+	background:url(/assets/login.jpg) ;
+	background-size: cover;
+	position: absolute;
+	overflow:hidden;
+	background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.overlay{
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background: rgba(0,0,0,0.5);
+}
+ion-item{
+	--ion-background-color: transparent!important;
+
+}
+.padding{
+	padding: 7%;
+}
+ion-icon {
+    font-size:125%;
+    right:1.5%;
+}
+
+ion-checkbox{
+	position: relative; 
+	left: 25%;
+}
+.format{
+    font-size:72.5% ;
+    text-align: center;
+}
+.butt{
+    position: relative;
+	right: 20%;
+	height:70%;
+}
+.title{
+	height: 250px;
+}
+ion-title{
+
+   height: 56%;
+   color: #f5f6f9;
+   font-size:1.7em;
+   text-align: center;
+}
+.footer{
+	position: absolute;
+	bottom:15%;
+	 left: 0;
+  	right: 0;
+}
+.input{
+	right:3%;
+
+}
+.iocn-end{
+	
+	right:50%;
+}
+.butt2{
+	margin-left: auto;
+    margin-right: auto;
+
+}
