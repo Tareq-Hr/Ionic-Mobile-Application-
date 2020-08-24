@@ -24,11 +24,6 @@ const routes: Routes = [
     path: 'add-page-local',
     loadChildren: () => import('./add-page-local/add-page-local.module').then( m => m.AddPageLocalPageModule)
   },
-  
-  {
-    path: 'menu',
-    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
-  },
  
   {
     path: 'liste',
@@ -65,8 +60,6 @@ const routes: Routes = [
 
 
 
-  
-];
 
 @NgModule({
   imports: [
