@@ -32,19 +32,21 @@ ion-icon {
 
 ion-checkbox{
 	position: relative; 
-	left: 25%;
+	left: 22%;
+	
 }
 .format{
-    font-size:72.5% ;
+    font-size:71% ;
     text-align: center;
+
 }
-.butt{
+.butt-auth{
     position: relative;
 	right: 20%;
 	height:70%;
 }
 .title{
-	height: 250px;
+	height: 240px;
 }
 ion-title{
 
@@ -55,19 +57,17 @@ ion-title{
 }
 .footer{
 	position: absolute;
-	bottom:15%;
+	bottom:7%;
 	 left: 0;
   	right: 0;
 }
 .input{
 	right:3%;
 
+
 }
-.iocn-end{
-	
-	right:50%;
-}
-.butt2{
+
+.butt-conn{
 	margin-left: auto;
     margin-right: auto;
 

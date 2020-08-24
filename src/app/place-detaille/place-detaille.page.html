@@ -6,62 +6,88 @@
 
 
 <ion-content [fullscreen]="true" >
-      <ion-list-header> 
+  <br>
   <strong>
-    <ion-text color="primary">Bab boudir</ion-text>
+    <ion-text color="primary">Bab Boudir</ion-text>
   </strong>
-	  </ion-list-header><br>
+ 
 
-        <ion-item lines="none">
-          <img  src="assets/login.jpg" > 
-         <ion-label class="f">
-      
-           <h2 style="color: green">Ville: </h2>
-         	 <p style="color: black" >taza </p>
-        
-         <h2 style="color: green">Pays: </h2>
-         	 <p style="color: black" >Maroc </p>
-       
-         </ion-label>
-        </ion-item>
-        <ion-list-header> 
-        <strong>
-           <ion-text color="primary">Description:</ion-text>
-        </strong>
-        </ion-list-header> 
-
-    <ion-item class="m" lines="none" >
-        <ion-label class="ion-text-wrap">
-      Multi-line text that should wrap 
+	<ion-item lines="none">
+          <img class="image"  src="assets/login.jpg" > 
+        <ion-label class="font">
+         	<ion-row>
+                 <h2  style="color: green ">Ville: </h2>
+                 <p style="color: black" >taza </p>
+            </ion-row>
+            <ion-row>
+                 <h2 style="color: green">Pays: </h2>
+                 <p style="color: black" >Maroc </p>
+            </ion-row>
+            <ion-row>
+                 <h2 style="color: green">Cordonnées: </h2>
+                 <p style="color: black" >10° 15° 18° nord </p>
+                 <p style="color: black" >4° 10° 00° ouest </p>
+            </ion-row>
         </ion-label>
     </ion-item>
 
-    <ion-list-header> 
+        <strong>
+           <ion-text color="primary">Description:</ion-text>
+        </strong>
+
+    <ion-item class="box-text" lines="none" >
+        <ion-text  class="ion-text-wrap" >
+      Bab boudir est une commune rural de la Province de Taza
+        </ion-text>
+    </ion-item>
+
         <strong>
            <ion-text color="primary">Images:</ion-text>
+        </strong><br>
+
+        <ion-grid no-padding >
+            <ion-row >
+          <ion-col  >
+            <img class="image1" src="assets/login.jpg" >
+          </ion-col  >
+            <ion-col >
+            <img class="image1" src="assets/login.jpg" >
+          </ion-col >
+            <ion-col >
+            <img class="image1" src="assets/login.jpg" >
+          </ion-col >
+            <ion-col >
+            <img class="image1" src="assets/login.jpg" >
+          </ion-col >
+           <ion-col >
+            <img class="image1" src="assets/login.jpg" >
+          </ion-col >   
+          <ion-col>
+          <ion-icon color="primary"  name="add-outline"></ion-icon>
+          </ion-col>
+            </ion-row>
+        </ion-grid><br>
+
+    <footer>
+        <strong>
+           <ion-text color="primary">Suggestion:</ion-text>
         </strong>
-        </ion-list-header> 
-        <ion-grid>
-            <ion-row>
-          <ion-col col-6>
-            <img  src="assets/login.jpg" >
+        <ion-grid  >
+             <ion-row>
+          <ion-col >
+           <ion-icon name="partly-sunny"></ion-icon>
           </ion-col>
           <ion-col>
-            <img  src="assets/login.jpg" >
+           <ion-icon name="restaurant"></ion-icon>
           </ion-col>
           <ion-col>
-            <img  src="assets/login.jpg" >
+            <ion-icon name="location"></ion-icon>          
           </ion-col>
-           <ion-col>
-            <img  src="assets/login.jpg" >
+          <ion-col>
+            <ion-icon name="bed"></ion-icon>
           </ion-col>
-           <ion-col>
-            <img  src="assets/login.jpg" >
-          </ion-col>
-       
-        </ion-row>
-      </ion-grid>
+             </ion-row>
+        </ion-grid>
 
-
-
+    </footer>
 </ion-content>
