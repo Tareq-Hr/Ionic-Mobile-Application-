@@ -35,10 +35,6 @@ const routes: Routes = [
   },
 
   {
-    path: 'add-page-local',
-    loadChildren: () => import('./add-page-local/add-page-local.module').then( m => m.AddPageLocalPageModule)
-  },
-  {
     path: 'localisation',
     loadChildren: () => import('./localisation/localisation.module').then( m => m.LocalisationPageModule)
   },
@@ -63,7 +59,10 @@ const routes: Routes = [
     path: 'hotels',
     loadChildren: () => import('./hotels/hotels.module').then( m => m.HotelsPageModule)
   },
-
+{
+    path: 'liste-places',
+    loadChildren: () => import('./liste-places/liste-places.module').then( m => m.ListePlacesPageModule)
+  },
   
 ];
 
