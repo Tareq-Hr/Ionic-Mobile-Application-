@@ -17,32 +17,58 @@ const routes: Routes = [
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'liste-places',
-    loadChildren: () => import('./liste-places/liste-places.module').then( m => m.ListePlacesPageModule)
+    path: 'place-detaille',
+    loadChildren: () => import('./place-detaille/place-detaille.module').then( m => m.PlaceDetaillePageModule)
   },
   {
     path: 'add-page-local',
     loadChildren: () => import('./add-page-local/add-page-local.module').then( m => m.AddPageLocalPageModule)
   },
+ 
   {
-    path: 'meteo',
-    loadChildren: () => import('./meteo/meteo.module').then( m => m.MeteoPageModule)
+    path: 'liste',
+    loadChildren: () => import('./liste/liste.module').then( m => m.ListePageModule)
   },
   {
-    path: 'menu',
-    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
+    path: 'inscription',
+    loadChildren: () => import('./inscription/inscription.module').then( m => m.InscriptionPageModule)
+  },
+
+  {
+    path: 'add-page-local',
+    loadChildren: () => import('./add-page-local/add-page-local.module').then( m => m.AddPageLocalPageModule)
   },
   {
     path: 'localisation',
     loadChildren: () => import('./localisation/localisation.module').then( m => m.LocalisationPageModule)
-  },  {
-    path: 'place-detaille',
-    loadChildren: () => import('./place-detaille/place-detaille.module').then( m => m.PlaceDetaillePageModule)
+  },
+  {
+    path: 'pharmacie',
+    loadChildren: () => import('./pharmacie/pharmacie.module').then( m => m.PharmaciePageModule)
+  },
+  {
+    path: 'transports',
+    loadChildren: () => import('./transports/transports.module').then( m => m.TransportsPageModule)
+  },
+   {
+    path: 'meteo',
+    loadChildren: () => import('./meteo/meteo.module').then( m => m.MeteoPageModule)
+  },
+{
+    path: 'resaturants',
+    loadChildren: () => import('./resaturants/resaturants.module').then( m => m.ResaturantsPageModule)
   },
 
+{
+    path: 'hotels',
+    loadChildren: () => import('./hotels/hotels.module').then( m => m.HotelsPageModule)
+  },
 
   
 ];
+
+
+
 
 @NgModule({
   imports: [
@@ -51,3 +77,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+

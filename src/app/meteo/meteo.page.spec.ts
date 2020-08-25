@@ -21,4 +21,10 @@ describe('MeteoPage', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have a list of 10 elements', () => {
+    MeteoPage = fixture.nativeElement;
+    const items = MeteoPage.querySelectorAll('ion-item');
+    expect(items.length).toEqual(10);
+  });
 });
