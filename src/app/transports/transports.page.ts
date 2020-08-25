@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./transports.page.scss'],
 })
 export class TransportsPage implements OnInit {
-
+  gare(){ 
+    
+  }
   constructor() { }
 
   ngOnInit() {

@@ -9,7 +9,7 @@ const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'resaturants',
+    redirectTo: 'transports',
     pathMatch: 'full'
   },
   {
@@ -28,10 +28,7 @@ const routes: Routes = [
     path: 'meteo',
     loadChildren: () => import('./meteo/meteo.module').then( m => m.MeteoPageModule)
   },
-  {
-    path: 'menu',
-    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
-  },
+
   {
     path: 'localisation',
     loadChildren: () => import('./localisation/localisation.module').then( m => m.LocalisationPageModule)
@@ -48,11 +45,6 @@ const routes: Routes = [
     path: 'hotels',
     loadChildren: () => import('./hotels/hotels.module').then( m => m.HotelsPageModule)
   },
-  {
-    path: 'resaturants',
-    loadChildren: () => import('./resaturants/resaturants.module').then( m => m.ResaturantsPageModule)
-  },
-
 
 
   
