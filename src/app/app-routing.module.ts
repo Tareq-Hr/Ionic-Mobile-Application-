@@ -9,7 +9,7 @@ const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'resaturants',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
@@ -24,13 +24,19 @@ const routes: Routes = [
     path: 'add-page-local',
     loadChildren: () => import('./add-page-local/add-page-local.module').then( m => m.AddPageLocalPageModule)
   },
+ 
   {
-    path: 'meteo',
-    loadChildren: () => import('./meteo/meteo.module').then( m => m.MeteoPageModule)
+    path: 'liste',
+    loadChildren: () => import('./liste/liste.module').then( m => m.ListePageModule)
   },
   {
-    path: 'menu',
-    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
+    path: 'inscription',
+    loadChildren: () => import('./inscription/inscription.module').then( m => m.InscriptionPageModule)
+  },
+
+  {
+    path: 'add-page-local',
+    loadChildren: () => import('./add-page-local/add-page-local.module').then( m => m.AddPageLocalPageModule)
   },
   {
     path: 'localisation',
@@ -44,19 +50,16 @@ const routes: Routes = [
     path: 'transports',
     loadChildren: () => import('./transports/transports.module').then( m => m.TransportsPageModule)
   },
-  {
-    path: 'hotels',
-    loadChildren: () => import('./hotels/hotels.module').then( m => m.HotelsPageModule)
+   {
+    path: 'meteo',
+    loadChildren: () => import('./meteo/meteo.module').then( m => m.MeteoPageModule)
   },
-  {
-    path: 'resaturants',
-    loadChildren: () => import('./resaturants/resaturants.module').then( m => m.ResaturantsPageModule)
-  },
-
-
 
   
 ];
+
+
+
 
 @NgModule({
   imports: [
@@ -65,3 +68,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
