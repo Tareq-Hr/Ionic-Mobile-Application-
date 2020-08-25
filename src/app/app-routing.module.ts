@@ -54,6 +54,15 @@ const routes: Routes = [
     path: 'meteo',
     loadChildren: () => import('./meteo/meteo.module').then( m => m.MeteoPageModule)
   },
+{
+    path: 'resaturants',
+    loadChildren: () => import('./resaturants/resaturants.module').then( m => m.ResaturantsPageModule)
+  },
+
+{
+    path: 'hotels',
+    loadChildren: () => import('./hotels/hotels.module').then( m => m.HotelsPageModule)
+  },
 
   
 ];
