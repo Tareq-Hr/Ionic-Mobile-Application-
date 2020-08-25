@@ -17,8 +17,8 @@ const routes: Routes = [
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'liste-places',
-    loadChildren: () => import('./liste-places/liste-places.module').then( m => m.ListePlacesPageModule)
+    path: 'place-detaille',
+    loadChildren: () => import('./place-detaille/place-detaille.module').then( m => m.PlaceDetaillePageModule)
   },
   {
     path: 'add-page-local',
@@ -77,4 +77,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
 

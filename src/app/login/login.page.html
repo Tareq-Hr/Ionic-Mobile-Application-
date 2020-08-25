@@ -1,9 +1,47 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
+<ion-header> 	
 </ion-header>
 
 <ion-content>
 
+	<section >
+		<div class="overlay"></div>  
+	</section>
+	<div class="padding">
+
+	<div class="title">	
+    <ion-title >Login</ion-title>
+	</div>
+
+  <ion-item class="input"> 
+  	<ion-icon color="light" class="icon1" name="person" ></ion-icon>
+    <ion-input color="light"  type="email" placeholder="adresse e-mail"></ion-input>
+    <ion-icon  color="light"  name="checkmark-outline"  slot="end"></ion-icon>
+  </ion-item><br>
+
+
+  <ion-item class="input">
+  	<ion-icon color="light"  name="lock-closed"  ></ion-icon>
+    <ion-input color="light"  type="password" placeholder="Mot de passe"></ion-input>
+    <ion-icon  color="light" name="eye"  slot="end"></ion-icon>	
+  </ion-item><br>
+
+
+  <ion-item lines="none">    
+  	<ion-checkbox  slot="start"  [(ngModel)]="Souviens"></ion-checkbox>
+    <ion-label class="format"  color="light" >Souviens toi de moi! </ion-label>
+  </ion-item>
+
+  <ion-button class="butt-conn" [routerLink]= "['/home']" expand="block">Connexion</ion-button>
+
+  <ion-item lines="none" class="footer"> 
+
+    <ion-label class="format"  color="light" >Vous avez pas un compte? </ion-label>
+    <ion-button  class="butt-auth" color= "green"  slot="end" fill="clear" >S'inscrire</ion-button>
+    
+  </ion-item>
+
+  </div>
+
 </ion-content>
+
+
