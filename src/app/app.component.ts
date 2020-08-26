@@ -20,7 +20,7 @@ export class AppComponent {
     },
     {
       title: 'Restaurants',
-      url: '/restaurans',
+      url: '/resaturants',
       icon: 'cloudy-night'
     },
     {
