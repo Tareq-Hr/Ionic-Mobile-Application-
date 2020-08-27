@@ -5,8 +5,8 @@
  <ion-card>
      <img src= "{{weather.current.weather_icons}}" style="width:100%"/>
      <ion-buttons style="position: absolute; top: 0%">
-	  <ion-icon name="arrow-back-outline" slot="start" style="color: white; font-size: 24px;"></ion-icon>
-	 </ion-buttons>
+    <ion-icon  [routerLink]= "['/home']" name="arrow-back-outline" slot="start" style="color: white; font-size: 24px;"></ion-icon>
+   </ion-buttons>
  <div>
      <p class="top-right">{{weather.current.temperature}}°</p>
      <p><strong class="weather_descriptions">{{weather.current.weather_descriptions}}</strong></p> 
@@ -14,7 +14,7 @@
  <div>
      <p class="bottom-left">{{weather.location.name}}, <span>{{weather.location.country}}</span> </p>
      <p class="localtime">{{weather.location.localtime}}</p>
- 	</div>
+  </div>
  </ion-card> 
           
           
