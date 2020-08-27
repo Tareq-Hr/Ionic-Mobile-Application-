@@ -1,9 +1,8 @@
 ion-text {
-   padding: 20px;
-   font-size: 100%;
-   font-style: bold;
+    padding: 6%;
+    font-size: 100%;
+    font-style: bold;
 }
-
 .image{
     margin-bottom:7%;
     margin-left : 5.5%;
@@ -12,34 +11,37 @@ ion-text {
 	max-width: 32%;
 	height: auto;
 	box-shadow: 0px 8px 7px 1.5px  rgba(0,0,0,0.3);
-
-
 }
 .box-text
 {
     border-width: thin;
     border-style: double;
     border-color: green; 
-    border-radius: 3%;
+    border-radius: 3.5%;
     box-shadow: -2px 4px 4.5px   rgba(0,0,0,0.3);
     padding: 1%;
     margin: 5%;
 }
-
 .font{
-	margin: 4%;
-	padding:12%;
+    margin: 5%;
+    padding:12%;
 }
 
 ion-icon{
 
     font-size:160%;
 }
-
-.image1{
+.grp-img{
     border-radius: 10%;
 	display: block;
-	
 	box-shadow: 0px 8px 7px   rgba(0,0,0,0.3);
+}
+button{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
 }
 

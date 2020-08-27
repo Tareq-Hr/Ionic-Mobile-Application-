@@ -7,16 +7,16 @@
 
 <ion-content [fullscreen]="true" >
   <br>
-  <strong>
-    <ion-text color="primary">Bab Boudir</ion-text>
-  </strong>
+       <strong>
+        <ion-text color="primary">Bab Boudir</ion-text>
+       </strong>
  
 
 	<ion-item lines="none">
           <img class="image"  src="assets/login.jpg" > 
         <ion-label class="font">
          	<ion-row>
-                 <h2  style="color: green ">Ville: </h2>
+                 <h2 style="color: green ">Ville: </h2>
                  <p style="color: black" >taza </p>
             </ion-row>
             <ion-row>
@@ -29,7 +29,7 @@
                  <p style="color: black" >4° 10° 00° ouest </p>
             </ion-row>
         </ion-label>
-    </ion-item>
+  </ion-item>
 
         <strong>
            <ion-text color="primary">Description:</ion-text>
@@ -48,22 +48,24 @@
         <ion-grid no-padding >
             <ion-row >
           <ion-col  >
-            <img class="image1" src="assets/login.jpg" >
+            <img class="grp-img" src="assets/login.jpg" >
           </ion-col  >
             <ion-col >
-            <img class="image1" src="assets/login.jpg" >
+            <img class="grp-img" src="assets/login.jpg" >
           </ion-col >
             <ion-col >
-            <img class="image1" src="assets/login.jpg" >
+            <img class="grp-img" src="assets/login.jpg" >
           </ion-col >
             <ion-col >
-            <img class="image1" src="assets/login.jpg" >
+            <img class="grp-img" src="assets/login.jpg" >
           </ion-col >
            <ion-col >
-            <img class="image1" src="assets/login.jpg" >
+            <img class="grp-img" src="assets/login.jpg" >
           </ion-col >   
           <ion-col>
+            <button>
           <ion-icon color="primary"  name="add-outline"></ion-icon>
+            </button>
           </ion-col>
             </ion-row>
         </ion-grid><br>
@@ -75,19 +77,31 @@
         <ion-grid  >
              <ion-row>
           <ion-col >
-           <ion-icon name="partly-sunny"></ion-icon>
+            <button  icon-only >
+           <ion-icon  name="partly-sunny"></ion-icon>
+            </button>
           </ion-col>
           <ion-col>
+            <button icon-only >
            <ion-icon name="restaurant"></ion-icon>
+            </button>
           </ion-col>
           <ion-col>
-            <ion-icon name="location"></ion-icon>          
+            <button icon-only >
+            <ion-icon name="location"></ion-icon> 
+            </button>         
           </ion-col>
           <ion-col>
-            <ion-icon name="bed"></ion-icon>
+            <button icon-only >
+           <ion-icon name="bed"></ion-icon>
+            </button> 
           </ion-col>
              </ion-row>
         </ion-grid>
-
     </footer>
+
 </ion-content>
+
+<!-- <button color="white" icon-only #lock (mouseover)="lock.isHover = true" >
+    <ion-icon name="bed"></ion-icon>
+  </button> -->
