@@ -1,8 +1,10 @@
 
   <ion-toolbar>
-    <ion-icon name="menu-outline" slot="start"></ion-icon>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-input type="text" placeholder="Chercher une place"></ion-input>
-    <ion-icon name="search-outline" slot="end"></ion-icon>
+    <ion-icon name="search" slot="end"></ion-icon>
   </ion-toolbar>
 
 <ion-content [fullscreen]="true">
@@ -12,7 +14,7 @@
  <div>
   <img src="assets/tazekka.png" alt="Tazekka" style="width:100%;">
   <strong class="top-left">Jebel Tazekka</strong>
-  <button class="bottom-left"><strong>Voir plus</strong></button>
+  <button class="bottom-left" [routerLink]= "['/liste']"><strong>Voir plus</strong></button>
 </div> 
 </ion-card>
 
@@ -20,7 +22,7 @@
  <div>
   <img src="assets/friouato.png" alt="Friouato" style="width:100%;">
   <strong class="top-left">Grotte Friouato</strong>
-  <button class="bottom-left"><strong>Voir plus</strong></button>
+  <button class="bottom-left" [routerLink]= "['/liste']"><strong>Voir plus</strong></button>
 </div> 
 </ion-card>
 
@@ -29,8 +31,13 @@
  <div>
   <img src="assets/ras_lma.png" alt="Ras lma" style="width:100%;">
   <strong class="top-left">Ras lma</strong>
-  <button class="bottom-left" [routerLink]= "['/home']"><strong>Voir plus</strong></button>
+  <button class="bottom-left" [routerLink]= "['/liste']"><strong>Voir plus</strong></button>
 </div>
 </ion-card>
 
+    <ion-fab [routerLink]= "['/add-page-local']" vertical="bottom" horizontal="end" edge="false" slot="fixed">
+      <ion-fab-button translucent="true" color="primary">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
 </ion-content>

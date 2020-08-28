@@ -1,9 +1,23 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>localisation</ion-title>
+  <ion-toolbar color="primary" class="map-toolbar">
+
+    <ion-buttons slot="start" [routerLink]= "['/home']" >
+        <ion-icon name="arrow-back-outline" style="font-size: 24px;"></ion-icon>
+     </ion-buttons>
+
+    <ion-title>
+      Choisir une place
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="addMarker()">
+        <ion-icon slot="icon-only" name="add-circle-outline" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
   </ion-toolbar>
-</ion-header>
 
-<ion-content>
+  <ion-content>
+    <div id="map">
 
+       </div>
 </ion-content>

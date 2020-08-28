@@ -1,0 +1,46 @@
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-input type="text" placeholder="Chercher des places localement"></ion-input>
+    <ion-icon name="search-outline" slot="end"></ion-icon>
+  </ion-toolbar>
+
+<ion-content [fullscreen]="true">
+  <br>
+
+<ion-card>
+ <div>
+  <img src="assets/tazekka.png" alt="Tazekka" style="width:100%;">
+  <strong class="top-left">Jebel Tazekka <ion-icon class="left" color="light" name="ellipsis-vertical-outline"></ion-icon></strong>
+
+
+
+</div> 
+  
+</ion-card>
+
+<ion-card>
+ <div>
+  <img src="assets/friouato.png" alt="Friouato" style="width:100%;">
+  <strong class="top-left">Grotte Friouato  <ion-icon class="left" color="light" name="ellipsis-vertical-outline"></ion-icon></strong>
+  
+</div> 
+</ion-card>
+
+<ion-card>
+
+ <div>
+  <img src="assets/ras_lma.png" alt="Ras lma" style="width:100%;">
+  <strong class="top-left">Ras lma<ion-icon class="left" color="light" name="ellipsis-vertical-outline"></ion-icon></strong>
+  
+</div>
+</ion-card>
+<br/>
+ <ion-fab class="add" vertical="center" horizontal="end" slot="fixed">
+    <ion-fab-button >
+      <ion-icon name="add" [routerLink]= "['/add-page-local']"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

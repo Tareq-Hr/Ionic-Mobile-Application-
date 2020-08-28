@@ -1,0 +1,40 @@
+.top-right { 
+  color: white;
+  border:2%;
+  text-shadow: 0 0 4px #000;
+  font-size: 400%;
+  line-height: 40px;
+  position: absolute;
+  top: 0.5%;
+  right: 5%;
+}
+
+.bottom-left { 
+  font-size: 300%;
+  color: white;
+  position: absolute;
+  bottom: 2%;
+  left: 5%;
+  text-shadow: 0 0 4px #000;
+}
+
+.weather_descriptions{
+  color: lightgray;
+  border:2%;
+  text-shadow: 0 0 2px #000;
+  font-size: 150%;
+  line-height: 40px;
+  position: absolute;
+  top: 4%;
+  right: 5%;
+}
+
+.localtime{
+  font-size: 150%;
+  color: black;
+  position: absolute;
+  bottom: 0%;
+  left: 5%;
+  right: 5%;
+  text-shadow: 0 0 1px #000;
+}
