@@ -12,92 +12,19 @@
   <ion-text color="secondary">Hotels</ion-text>
 </strong>
 
+
+<div *ngFor="let image of images">
 <!-- List of Text Items -->
 <ion-list>
- 
   <ion-item>
-      <ion-img src="{{info.image}}" slot="start"></ion-img>
+      <ion-img src="{{image.url}}" slot="start"></ion-img>
 
     <ion-label>
-      <h2 ><b>{{info.nom}}</b></h2>
-      <p>{{info.adresse}}</p>
+      <h2 ><b>{{image.name}}</b></h2>
+      <p>{{image.adresse}}</p>
     </ion-label>
     <ion-icon name="eye" slot="end" class="eye"></ion-icon>
-  </ion-item>
-
-
-  <ion-item>
- 
-    <ion-img src="{{info.image}}" slot="start"></ion-img>
- 
-    <ion-label>
-      <h2><b>{{info.nom}}</b></h2>
-      <p>{{info.adresse}}</p>
-    </ion-label>
-    <ion-icon name="eye" slot="end" class="eye"></ion-icon>
-  </ion-item>
-
-  <ion-item>
-    <ion-img src="{{info.image}}" slot="start"></ion-img>
-    <ion-label>
-      <h2><b>{{info.nom}}</b></h2>
-      <p>{{info.adresse}}</p>
-    </ion-label>
-    <ion-icon name="eye" slot="end" class="eye"></ion-icon>
-
-  </ion-item>
-
-  <ion-item>
-    <ion-img src="{{info.image}}" slot="start"></ion-img>
-    <ion-label>
-      <h2><b>{{info.nom}}</b></h2>
-      <p>{{info.adresse}}</p>
-    </ion-label>
-    <ion-icon name="eye" slot="end" class="eye"></ion-icon>
-
-  </ion-item>
-
-  <ion-item>
-    <ion-img src="{{info.image}}" slot="start"></ion-img>
-    <ion-label>
-      <h2><b>{{info.nom}}</b></h2>
-      <p>{{info.adresse}}</p>
-    </ion-label>
-    <ion-icon name="eye" slot="end" class="eye"></ion-icon>
-
-  </ion-item>
-
-  <ion-item>
-    <ion-img src="{{info.image}}" slot="start"></ion-img>
-    <ion-label>
-      <h2><b>{{info.nom}}</b></h2>
-      <p>{{info.adresse}}</p>
-    </ion-label>
-    <ion-icon name="eye" slot="end" class="eye"></ion-icon>
-
-  </ion-item>
-
-  <ion-item>
-    <ion-img src="{{info.image}}" slot="start"></ion-img>
-    <ion-label>
-      <h2><b>{{info.nom}}</b></h2>
-      <p>{{info.adresse}}</p>
-    </ion-label>
-    <ion-icon name="eye" slot="end" class="eye"></ion-icon>
-
-  </ion-item>
-
-  <ion-item>
-    <ion-img src="{{info.image}}" slot="start"></ion-img>
-    <ion-label>
-      
-      <p>{{info.adresse}}</p>
-    </ion-label>
-    <ion-icon name="eye" slot="end" class="eye"></ion-icon>
-
-  </ion-item>
-
-  
+  </ion-item>  
 </ion-list>
-
+</div>
 </ion-content>

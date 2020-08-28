@@ -10,7 +10,7 @@ export class PharmaciePage implements OnInit {
   public info={
     nom:"Pharmacie Taza",
     adresse:"266,lotiss.koucha 35000",
-    image:"assets/th-3.jpeg",
+    image:"assets/pharmacie.jpeg",
     icon:"assets/path.png"
   }
   constructor() { }
