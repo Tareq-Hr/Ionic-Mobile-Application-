@@ -1,8 +1,9 @@
- <ion-toolbar>
-    <ion-icon name="menu-outline" slot="start"></ion-icon>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-input type="text" placeholder="Chercher des places localement"></ion-input>
     <ion-icon name="search-outline" slot="end"></ion-icon>
-
   </ion-toolbar>
 
 <ion-content [fullscreen]="true">
@@ -37,8 +38,8 @@
 </ion-card>
 <br/>
  <ion-fab class="add" vertical="center" horizontal="end" slot="fixed">
-    <ion-fab-button>
-      <ion-icon name="add"></ion-icon>
+    <ion-fab-button >
+      <ion-icon name="add" [routerLink]= "['/add-page-local']"></ion-icon>
     </ion-fab-button>
   </ion-fab>
 
