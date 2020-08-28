@@ -9,7 +9,7 @@ import { AngularFireStorage } from '@angular/fire/storage';
 })
 export class HomePage {
 
-  constructor(public afDB : AngularFireDatabase){}
+  constructor(){}
 
 
 /*  add(){
