@@ -39,11 +39,13 @@ getImagesStorage(image: any) {
   const imgRef = image.payload.exportVal().images;
   this.afSG.ref(imgRef).getDownloadURL().subscribe(imgUrl => {
     console.log(imgUrl);
+     if(image.payload.exportVal().categorie == 'hotel'){
     this.images.push({
       name: image.payload.exportVal().titre,
       url: imgUrl,
       adresse: image.payload.exportVal().adresse
     });
+  }
   });
 }
   ngOnInit() {
