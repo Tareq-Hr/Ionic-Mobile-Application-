@@ -8,39 +8,22 @@
 
 <ion-content [fullscreen]="true">
   <br>
-
-<ion-card>
- <div>
-  <img src="assets/tazekka.png" alt="Tazekka" style="width:100%;">
-  <strong class="top-left">Jebel Tazekka <ion-icon class="left" color="light" name="ellipsis-vertical-outline"></ion-icon></strong>
-
-
-
+<strong>
+  <ion-text color="secondary">Vos Places Locals</ion-text>
+</strong>
+<div *ngFor="let image of images">
+<ion-card style="height: 50%">
+  <img src="{{image.url}}" alt="{{image.name}}" style="width:100%; height: 50%">
+  <strong class="top-left">{{image.name}}</strong>
+  <ion-icon class="left" color="light" name="ellipsis-vertical-outline"></ion-icon>
+  <button class="bottom-left" [routerLink]= "['/liste-places']"><strong>Voir plus</strong></button>
+</ion-card>
 </div> 
-  
-</ion-card>
 
-<ion-card>
- <div>
-  <img src="assets/friouato.png" alt="Friouato" style="width:100%;">
-  <strong class="top-left">Grotte Friouato  <ion-icon class="left" color="light" name="ellipsis-vertical-outline"></ion-icon></strong>
-  
-</div> 
-</ion-card>
-
-<ion-card>
-
- <div>
-  <img src="assets/ras_lma.png" alt="Ras lma" style="width:100%;">
-  <strong class="top-left">Ras lma<ion-icon class="left" color="light" name="ellipsis-vertical-outline"></ion-icon></strong>
-  
-</div>
-</ion-card>
-<br/>
- <ion-fab class="add" vertical="center" horizontal="end" slot="fixed">
-    <ion-fab-button >
-      <ion-icon name="add" [routerLink]= "['/add-page-local']"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
+<ion-fab [routerLink]= "['/add-page-local']" vertical="bottom" horizontal="end" edge="false" slot="fixed">
+      <ion-fab-button translucent="true" color="primary">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
 
 </ion-content>
