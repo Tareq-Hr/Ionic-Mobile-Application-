@@ -17,7 +17,7 @@ import { IonicStorageModule } from '@ionic/storage';
 import { AngularFireModule } from '@angular/fire'; // pour se connecter à Firebase
 import { AngularFireDatabaseModule } from '@angular/fire/database'; // pour manipuler la base de données Firebase
 import { AngularFireStorageModule } from '@angular/fire/storage'; // pour accéder aux fonction de stockage et de récupération des fichiers
-
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 
 @NgModule({
@@ -33,6 +33,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage'; // pour accéd
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
+    AngularFirestoreModule,
     AngularFireStorageModule
   ],
   providers: [

@@ -7,6 +7,9 @@
 </ion-toolbar>
 <ion-content [fullscreen]="true">
   <br>
+<strong>
+  <ion-text color="secondary">Vos Places Locals</ion-text>
+</strong>
   <div *ngFor="let image of images">
   <ion-card>
     <div>
@@ -16,4 +19,10 @@
    </div> 
    </ion-card>
   </div>
+    <ion-fab>
+      <ion-fab-button translucent="true" color="primary">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
 </ion-content>
