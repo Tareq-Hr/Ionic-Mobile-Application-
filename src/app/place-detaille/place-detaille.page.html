@@ -8,9 +8,8 @@
 <ion-content [fullscreen]="true" >
   <br>
   <strong>
-    <ion-text color="primary">Bab Boudir</ion-text>
+    <ion-text class="titre">Bab Boudir</ion-text>
   </strong>
- 
 
 	<ion-item lines="none">
           <img class="image"  src="assets/login.jpg" > 
@@ -32,7 +31,7 @@
     </ion-item>
 
         <strong>
-           <ion-text color="primary">Description:</ion-text>
+           <ion-text  class="titre">Description:</ion-text>
         </strong>
 
     <ion-item class="box-text" lines="none" >
@@ -42,10 +41,10 @@
     </ion-item>
 
         <strong>
-           <ion-text color="primary">Images:</ion-text>
+           <ion-text  class="titre">Images:</ion-text>
         </strong><br>
-
-        <ion-grid no-padding >
+        <hr>
+        <ion-grid class="iongrid" >
             <ion-row >
           <ion-col  >
             <img class="image1" src="assets/login.jpg" >
@@ -62,29 +61,28 @@
            <ion-col >
             <img class="image1" src="assets/login.jpg" >
           </ion-col >   
-          <ion-col>
-          <ion-icon color="primary"  name="add-outline"></ion-icon>
-          </ion-col>
+        
             </ion-row>
         </ion-grid><br>
 
     <footer>
         <strong>
-           <ion-text color="primary">Suggestion:</ion-text>
+           <ion-text class="titre">Suggestion:</ion-text>
         </strong>
-        <ion-grid  >
-             <ion-row>
+        <hr>
+        <ion-grid class="grid" >
+             <ion-row >
           <ion-col >
-           <ion-icon name="partly-sunny"></ion-icon>
+          <ion-button class="buttons" fill="clear"><ion-icon name="partly-sunny" class="icons"></ion-icon> </ion-button>
           </ion-col>
           <ion-col>
-           <ion-icon name="restaurant"></ion-icon>
+            <ion-button class="buttons"fill="clear"><ion-icon name="restaurant" class="icons"></ion-icon></ion-button>
           </ion-col>
           <ion-col>
-            <ion-icon name="location"></ion-icon>          
+            <ion-button class="buttons"fill="clear"><ion-icon name="location" class="icons"></ion-icon>    </ion-button>      
           </ion-col>
           <ion-col>
-            <ion-icon name="bed"></ion-icon>
+            <ion-button class="buttons"fill="clear"> <ion-icon name="bed" class="icons"></ion-icon> </ion-button>      
           </ion-col>
              </ion-row>
         </ion-grid>
