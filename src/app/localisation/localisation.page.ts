@@ -31,6 +31,7 @@ export class LocalisationPage implements OnInit {
     }
     }
 
+/*API Places : https://maps.googleapis.com/maps/api/place/textsearch/json?query=taza&key=AIzaSyATk2szK7uvBWigwm7OcfS2vXO9jZHYN7Y*/
 
   loadMap() {
 	Environment.setEnv({

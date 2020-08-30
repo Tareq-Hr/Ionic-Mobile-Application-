@@ -10,6 +10,7 @@ export class WeatherService {
 
   getWeatherFromApi(){
   return this.httpClient.get('http://api.weatherstack.com/current?access_key=36923d9773ab8e5e2c3b31569add87df&query=Taza%20Morocco');
+
 }
 
 }

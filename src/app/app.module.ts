@@ -10,11 +10,16 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import {AngularFireModule} from '@angular/fire';
 import {environment} from '../environments/environment';
 import { HttpClientModule } from "@angular/common/http";
 import { IonicStorageModule } from '@ionic/storage';
-import {AngularFirestoreModule} from '@angular/fire/firestore';
+
+import { AngularFireModule } from '@angular/fire'; // pour se connecter à Firebase
+import { AngularFireDatabaseModule } from '@angular/fire/database'; // pour manipuler la base de données Firebase
+import { AngularFireStorageModule } from '@angular/fire/storage'; // pour accéder aux fonction de stockage et de récupération des fichiers
+
+
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -27,7 +32,8 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
     ReactiveFormsModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+    AngularFireDatabaseModule,
+    AngularFireStorageModule
   ],
   providers: [
     StatusBar,
