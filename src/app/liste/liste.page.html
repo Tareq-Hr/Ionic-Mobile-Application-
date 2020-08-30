@@ -1,26 +1,25 @@
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-input type="text" placeholder="Chercher des places localement"></ion-input>
-    <ion-icon name="search-outline" slot="end"></ion-icon>
-  </ion-toolbar>
-
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-menu-button></ion-menu-button>
+  </ion-buttons>
+  <ion-input type="text" placeholder="Chercher une place"></ion-input>
+  <ion-icon name="search" slot="end"></ion-icon>
+</ion-toolbar>
 <ion-content [fullscreen]="true">
   <br>
 <strong>
   <ion-text color="secondary">Vos Places Locals</ion-text>
 </strong>
-<div *ngFor="let image of images">
-<ion-card style="height: 50%">
-  <img src="{{image.url}}" alt="{{image.name}}" style="width:100%; height: 50%">
-  <strong class="top-left">{{image.name}}</strong>
-  <ion-icon class="left" color="light" name="ellipsis-vertical-outline"></ion-icon>
-  <button class="bottom-left" [routerLink]= "['/liste-places']"><strong>Voir plus</strong></button>
-</ion-card>
-</div> 
-
-<ion-fab [routerLink]= "['/add-page-local']" vertical="bottom" horizontal="end" edge="false" slot="fixed">
+  <div *ngFor="let image of images">
+  <ion-card>
+    <div>
+     <img src="{{image.url}}" alt="Grottes" style="width:100%;">
+     <strong class="top-left">{{image.name}}</strong>
+     <button class="bottom-left" [routerLink]= "['/place-detaille',image.name]"><strong>Voir plus</strong></button>
+   </div> 
+   </ion-card>
+  </div>
+    <ion-fab>
       <ion-fab-button translucent="true" color="primary">
         <ion-icon name="add"></ion-icon>
       </ion-fab-button>
