@@ -9,7 +9,7 @@ const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'transports',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
@@ -35,7 +35,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'localisation',
+    path: 'localisation/:latitude/:longitude',
     loadChildren: () => import('./localisation/localisation.module').then( m => m.LocalisationPageModule)
   },
   {

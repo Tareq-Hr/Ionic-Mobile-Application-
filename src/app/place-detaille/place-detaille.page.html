@@ -74,8 +74,8 @@
         <ion-col>
           <ion-button class="buttons"fill="clear"><ion-icon name="restaurant" class="icons"></ion-icon></ion-button>
         </ion-col>
-        <ion-col>
-          <ion-button class="buttons"fill="clear"><ion-icon name="location" class="icons"></ion-icon>    </ion-button>      
+        <ion-col *ngFor="let image of images">
+          <ion-button class="buttons"fill="clear" [routerLink] = "['/localisation',image.lat,image.long]"><ion-icon name="location" class="icons"></ion-icon>    </ion-button>      
         </ion-col>
         <ion-col>
           <ion-button class="buttons"fill="clear"> <ion-icon name="bed" class="icons"></ion-icon> </ion-button>      

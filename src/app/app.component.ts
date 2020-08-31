@@ -35,7 +35,7 @@ export class AppComponent {
     },
     {
       title: 'Localisation',
-      url: '/localisation',
+      url: '/localisation/34.2199201/-3.99871',
       icon: 'location-outline'
     },
     {

@@ -132,10 +132,10 @@ export class AddPageLocalPage implements OnInit {
   	{
   		ville: 'Taza',
   		pays: 'Maroc',
-  		titre: document.getElementById("titre").value,
-  		adresse: document.getElementById('adresse').value,
-  		mots_cles: document.getElementById('titre').value,
-  		description: document.getElementById('description').value,
+  		titre: document.getElementById("titre"),
+  		adresse: document.getElementById('adresse'),
+  		mots_cles: document.getElementById('titre'),
+  		description: document.getElementById('description'),
   		images: `/PlacesLocals/${this.fileName}`
    	});
 }
