@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireStorage } from '@angular/fire/storage';
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -7,6 +10,7 @@ import { Component } from '@angular/core';
 export class HomePage {
 
   constructor(){}
+
 /*  add(){
 
   	this.afDB.list('Places/').push(

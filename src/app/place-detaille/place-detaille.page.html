@@ -1,4 +1,3 @@
-
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
@@ -9,6 +8,7 @@
 <ion-content [fullscreen]="true" >
 <br>
 <strong>
+
   <div *ngFor="let image of images">
   <ion-text class="titre">{{image.name}}</ion-text>
   </div>
@@ -32,6 +32,7 @@
           </ion-row>
       </ion-label>
   </ion-item>
+
       <strong>
          <ion-text  class="titre">Description:</ion-text>
       </strong>
@@ -42,17 +43,20 @@
       </ion-text>
   </ion-item>
 </div>
+
       <strong>
          <ion-text  class="titre">Images:</ion-text>
       </strong><br>
       <hr>
       <ion-grid class="iongrid" >
           <ion-row >
+
             <div *ngFor="let image of images">
                <ion-col  >
           <img class="image1" src="{{image.url}}" >
         </ion-col  >
             </div>  
+
       
           </ion-row>
       </ion-grid><br>
