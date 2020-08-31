@@ -10,7 +10,7 @@ const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'transports',
     pathMatch: 'full'
   },
   {
@@ -19,7 +19,7 @@ const routes: Routes = [
 
   },
   {
-    path: 'place-detaille',
+    path: 'place-detaille/:id',
     loadChildren: () => import('./place-detaille/place-detaille.module').then( m => m.PlaceDetaillePageModule)
   },
   {
@@ -28,7 +28,7 @@ const routes: Routes = [
   },
  
   {
-    path: 'liste',
+    path: 'liste/:id',
     loadChildren: () => import('./liste/liste.module').then( m => m.ListePageModule)
   },
   {

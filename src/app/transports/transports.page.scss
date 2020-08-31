@@ -1,6 +1,10 @@
-ion-text{
+
+.titre{
     padding: 10%;
-}
+    color: #167016;
+ 
+ }
+
 
 ion-card{
     box-shadow:1px 1px 1px 1px gray;
@@ -17,4 +21,11 @@ height: 50%;
     color: black;
     width: 30%;
     height: 30%;
+}
+
+ion-label{
+
+    margin: 20%;
+    color: #CE9C5A;
+
 }
