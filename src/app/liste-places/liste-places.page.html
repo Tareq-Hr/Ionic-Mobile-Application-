@@ -1,4 +1,3 @@
-
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
@@ -9,30 +8,12 @@
 
 <ion-content [fullscreen]="true">
   <br>
-
-<ion-card>
+<ion-card *ngFor="let image of images">
  <div>
-  <img src="assets/tazekka.png" alt="Tazekka" style="width:100%;">
-  <strong class="top-left">Jebel Tazekka</strong>
-  <button class="bottom-left" [routerLink]= "['/liste']"><strong>Voir plus</strong></button>
+  <img src="{{image.url}}" alt="{{image.name}}" style="width:100%;height: 85%; display: block;">
+  <strong class="top-left">{{image.name}}</strong>
+  <button class="bottom-left" [routerLink]=  "['/place-detaille',image.name]"><strong>Voir plus</strong></button>
 </div> 
-</ion-card>
-
-<ion-card>
- <div>
-  <img src="assets/friouato.png" alt="Friouato" style="width:100%;">
-  <strong class="top-left">Grotte Friouato</strong>
-  <button class="bottom-left" [routerLink]= "['/liste']"><strong>Voir plus</strong></button>
-</div> 
-</ion-card>
-
-<ion-card>
-
- <div>
-  <img src="assets/ras_lma.png" alt="Ras lma" style="width:100%;">
-  <strong class="top-left">Ras lma</strong>
-  <button class="bottom-left" [routerLink]= "['/liste']"><strong>Voir plus</strong></button>
-</div>
 </ion-card>
 
     <ion-fab [routerLink]= "['/add-page-local']" vertical="bottom" horizontal="end" edge="false" slot="fixed">

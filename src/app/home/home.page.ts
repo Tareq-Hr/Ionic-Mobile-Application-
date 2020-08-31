@@ -11,7 +11,6 @@ export class HomePage {
 
   constructor(){}
 
-
 /*  add(){
 
   	this.afDB.list('Places/').push(

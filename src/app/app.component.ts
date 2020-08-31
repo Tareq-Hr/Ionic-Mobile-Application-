@@ -21,7 +21,7 @@ export class AppComponent {
     {
       title: 'Restaurants',
       url: '/resaturants',
-      icon: 'cloudy-night'
+      icon: 'restaurant-outline'
     },
     {
       title: 'Hôtels',
@@ -52,6 +52,11 @@ export class AppComponent {
       title: 'Ajouter place',
       url: '/add-page-local',
       icon: 'add-circle-outline'
+    },
+    {
+      title: 'Places Locals',
+      url: '/liste-places',
+      icon: 'image-outline'
     }
 
   ];
