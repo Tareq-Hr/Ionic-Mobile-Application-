@@ -1,5 +1,4 @@
-
-<ion-content>
+<ion-content padding >
 
   <section >
     <div class="overlay"></div>  
@@ -12,14 +11,14 @@
 
   <ion-item class="input"> 
   	<ion-icon color="medium" class="icon1" name="person" ></ion-icon>
-    <ion-input color="medium"  type="email" placeholder="adresse e-mail"></ion-input>
+    <ion-input color="medium"  type="email" placeholder="adresse e-mail"  [(ngModel)]="user.email"></ion-input>
     <ion-icon  color="medium"  name="checkmark-outline"  slot="end"></ion-icon>
   </ion-item><br>
 
 
   <ion-item class="input">
   	<ion-icon color="medium"  name="lock-closed"  ></ion-icon>
-    <ion-input color="medium"  type="password" placeholder="Mot de passe"></ion-input>
+    <ion-input color="medium"  type="password" placeholder="Mot de passe" [(ngModel)]="user.password"></ion-input>
     <ion-icon  color="medium" name="eye"  slot="end"></ion-icon>	
   </ion-item><br>
  
@@ -30,7 +29,7 @@
     <ion-label class="format"  color="light" >Souviens toi de moi! </ion-label>
   </ion-item>
 
-  <ion-button class="butt-conn" [routerLink]= "['/home']" expand="block">Connexion</ion-button>
+  <ion-button class="butt-conn" (click)="onLogin()" expand="block">Connexion</ion-button>
 
   <ion-item lines="none" class="footer"> 
 

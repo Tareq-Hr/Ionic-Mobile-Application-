@@ -28,7 +28,7 @@
     "@ionic/storage": "^2.3.0",
     "cordova-browser": "6.0.0",
     "cordova-plugin-googlemaps": "^2.7.1",
-    "firebase": "^7.19.0",
+    "firebase": "^7.19.1",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"

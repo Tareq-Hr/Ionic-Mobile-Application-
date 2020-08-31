@@ -1,4 +1,4 @@
-<ion-content class="bg">
+<ion-content class="bg" padding>
 
 <section>
 	<div class="overlay"></div>
@@ -16,25 +16,25 @@
 
 	<ion-item class="item">
 		<ion-label color="light"></ion-label>
-		<ion-input color="light" placeholder="Adresse E-mail" type="email"></ion-input >
+		<ion-input color="light" placeholder="Adresse E-mail" type="email" [(ngModel)]="user.email"></ion-input >
 		<ion-icon color="medium"name="checkmark" ></ion-icon>
 	</ion-item>
 	<br/>
 
 	<ion-item class="item">
 		<ion-label color="light"></ion-label>
-		<ion-input color="light" placeholder="Mot de passe" [type]="showPassword ? 'text' : 'password' " ></ion-input>
+		<ion-input color="light" placeholder="Mot de passe" [type]="showPassword ? 'text' : 'password' " [(ngModel)]="user.password"></ion-input>
 		 <ion-icon  color="medium" [name]="passwordToggleIcon" (click)="togglePassword()"></ion-icon>
 	</ion-item>
 	<br/>
 
 	<ion-item class="item">
 		<ion-label color="light"></ion-label>
-		<ion-input color="light" placeholder="Confirmer mot de passe" [type]="showPassword1 ? 'text' : 'password' " name="password"></ion-input>
+		<ion-input color="light" placeholder="Confirmer mot de passe" [type]="showPassword1 ? 'text' : 'password' " [(ngModel)]="user.password"></ion-input>
 		 <ion-icon  color="medium" [name]="passwordToggleIcon1" (click)="togglePassword1()"></ion-icon>
 	</ion-item>
 	<br/>
-	<ion-button  expand="block" [routerLink]= "['/home']" >Connexion </ion-button>
+	<ion-button  expand="block" (click)="onRegister()">Connexion </ion-button>
 	
 	<ion-item class="item1" lines="none" >
 		<ion-label text-center color="medium">Vous avez déjà connecter?</ion-label>
