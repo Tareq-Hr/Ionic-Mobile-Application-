@@ -28,40 +28,20 @@ getImagesDatabase() {
   });
 }
 
-
-  images = [];
-  constructor(
-    public afSG: AngularFireStorage,
-    public afDB: AngularFireDatabase
-    
-  ) {
-    this.getImagesDatabase();
-  }
-
-
-
-getImagesDatabase() {
-  this.afDB.list('PlacesLocals/').snapshotChanges(['child_added']).subscribe(images => {
-    images.forEach(image => {
-      this.getImagesStorage(image);
-    });
-  });
-}
-
-
 getImagesStorage(image: any) {
   const imgRef = image.payload.exportVal().images;
   this.afSG.ref(imgRef).getDownloadURL().subscribe(imgUrl => {
     console.log(imgUrl);
-    let param=this.route.snapshot.paramMap.get('id');
-     if(image.payload.exportVal().categorie ==param){
+    let param = this.route.snapshot.paramMap.get('id');
+     if(image.payload.exportVal().categorie == param){
     this.images.push({
       name: image.payload.exportVal().titre,
-      url: imgUrl,
+      url: imgUrl
     });
   }
   });
 }
+
   ngOnInit() {
   }
 

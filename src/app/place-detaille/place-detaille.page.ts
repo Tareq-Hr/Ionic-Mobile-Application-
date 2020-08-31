@@ -17,12 +17,20 @@ export class PlaceDetaillePage implements OnInit {
     
   ) {
     this.getImagesDatabase();
+    this.getImagesLocalDatabase();
   }
 
 
 
 getImagesDatabase() {
   this.afDB.list('Places/').snapshotChanges(['child_added']).subscribe(images => {
+    images.forEach(image => {this.getImagesStorage(image);
+    });
+  });
+}
+
+getImagesLocalDatabase() {
+  this.afDB.list('PlacesLocals/').snapshotChanges(['child_added']).subscribe(images => {
     images.forEach(image => {this.getImagesStorage(image);
     });
   });
@@ -38,15 +46,16 @@ getImagesStorage(image: any) {
       name: image.payload.exportVal().titre,
       url: imgUrl,
       adresse: image.payload.exportVal().adresse,
-      long: image.payload.exportVal().longitude,
-      lat: image.payload.exportVal().latitude,
       ville: image.payload.exportVal().ville,
       pays: image.payload.exportVal().pays,
+      long: image.payload.exportVal().longitude,
+      lat: image.payload.exportVal().latitude,
       desc: image.payload.exportVal().mots_cles
     });
   }
   });
 }
+
   ngOnInit() {
   }
 
