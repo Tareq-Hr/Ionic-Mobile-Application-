@@ -27,7 +27,7 @@
       <h2>{{image.name}}</h2>
       <p>{{image.adresse}}</p>
     </ion-label>
-    <ion-icon name="location" slot="end" ></ion-icon>
+    <ion-icon [routerLink] = "['/localisation',image.lat,image.long]" name="location" slot="end"></ion-icon>
   </ion-item>
 
 

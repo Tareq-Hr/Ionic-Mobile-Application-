@@ -42,7 +42,9 @@ getImagesStorage(image: any) {
     this.images.push({
       name: image.payload.exportVal().titre,
       url: imgUrl,
-      adresse: image.payload.exportVal().adresse
+      adresse: image.payload.exportVal().adresse,
+      long: image.payload.exportVal().longitude,
+      lat: image.payload.exportVal().latitude
     });
   }
   });
