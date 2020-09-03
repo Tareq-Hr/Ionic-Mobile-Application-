@@ -49,11 +49,6 @@ export class AppComponent {
       icon: 'bus-outline'
     },
     {
-      title: 'Ajouter place',
-      url: '/add-page-local',
-      icon: 'add-circle-outline'
-    },
-    {
       title: 'Places Locals',
       url: '/liste-places',
       icon: 'image-outline'
