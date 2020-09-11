@@ -5,6 +5,7 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    
   },
 
   {
@@ -14,7 +15,8 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule),
+
   },
   {
     path: 'place-detaille',
@@ -62,6 +64,10 @@ const routes: Routes = [
 {
     path: 'liste-places',
     loadChildren: () => import('./liste-places/liste-places.module').then( m => m.ListePlacesPageModule)
+  },
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)
   },
   
 ];

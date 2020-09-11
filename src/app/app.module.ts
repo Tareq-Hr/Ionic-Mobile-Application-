@@ -13,11 +13,10 @@ import { AppRoutingModule } from './app-routing.module';
 import {environment} from '../environments/environment';
 import { HttpClientModule } from "@angular/common/http";
 import { IonicStorageModule } from '@ionic/storage';
-
 import { AngularFireModule } from '@angular/fire'; // pour se connecter à Firebase
 import { AngularFireDatabaseModule } from '@angular/fire/database'; // pour manipuler la base de données Firebase
 import { AngularFireStorageModule } from '@angular/fire/storage'; // pour accéder aux fonction de stockage et de récupération des fichiers
-
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 
 @NgModule({
@@ -27,13 +26,8 @@ import { AngularFireStorageModule } from '@angular/fire/storage'; // pour accéd
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    HttpClientModule,
-    IonicStorageModule.forRoot(),
-    ReactiveFormsModule,
-    FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule,
-    AngularFireStorageModule
+    AngularFireAuthModule
   ],
   providers: [
     StatusBar,
