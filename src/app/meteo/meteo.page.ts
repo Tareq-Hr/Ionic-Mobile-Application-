@@ -1,3 +1,4 @@
+/////////////
 import { Component, OnInit } from '@angular/core';
 
 import { WeatherService } from "../weather.service";
@@ -12,8 +13,9 @@ import { Storage } from "@ionic/storage";
 })
 export class MeteoPage implements OnInit {
 
-  constructor(private weatherService: WeatherService, private ionicStorage: Storage) {
   
+  constructor(public weatherService: WeatherService) {
+
   }
 
   public weatherForm = new FormGroup({
@@ -24,7 +26,7 @@ export class MeteoPage implements OnInit {
 
   search(formData: FormData){
     console.log(formData);
-    
+
     this.weatherService.getWeatherFromApi().subscribe( weather => {
       this.weather = weather;
       console.log(weather);
@@ -39,12 +41,12 @@ export class MeteoPage implements OnInit {
             this.weather = weather;
             console.log(weather);
           });
-   
+
   }
 
   ngOnInit() {
     this.getWeather();
   }
-  
+
 
 }

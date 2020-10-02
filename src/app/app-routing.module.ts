@@ -48,10 +48,6 @@ const routes: Routes = [
     path: 'transports',
     loadChildren: () => import('./transports/transports.module').then( m => m.TransportsPageModule)
   },
-   {
-    path: 'meteo',
-    loadChildren: () => import('./meteo/meteo.module').then( m => m.MeteoPageModule)
-  },
 {
     path: 'resaturants',
     loadChildren: () => import('./resaturants/resaturants.module').then( m => m.ResaturantsPageModule)
@@ -69,6 +65,11 @@ const routes: Routes = [
     path: 'admin',
     loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)
   },
+  {
+    path: 'meteo',
+    loadChildren: () => import('./meteo/meteo.module').then( m => m.MeteoPageModule)
+  },
+
   
 ];
 
