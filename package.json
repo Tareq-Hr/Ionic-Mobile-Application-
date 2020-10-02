@@ -28,6 +28,7 @@
     "@ionic/angular": "^5.0.0",
     "@ionic/storage": "^2.3.0",
     "browserslist": "^2.2.0",
+    "cordova-android": "8.1.0",
     "cordova-browser": "6.0.0",
     "cordova-plugin-googlemaps": "^2.7.1",
     "firebase": "^7.19.1",
@@ -79,7 +80,8 @@
       "cordova-plugin-camera": {}
     },
     "platforms": [
-      "browser"
+      "browser",
+      "android"
     ]
   }
 }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+
 
 import {
   GoogleMaps,
@@ -12,7 +15,7 @@ import {
   Environment
 } from '@ionic-native/google-maps';
 
-import { ActionSheetController, Platform, AlertController } from '@ionic/angular';
+import { ActionSheetController, Platform, AlertController} from '@ionic/angular';
 
 @Component({
   selector: 'app-localisation',
@@ -25,6 +28,7 @@ export class LocalisationPage implements OnInit {
 
   constructor(public alertController: AlertController,
     public actionCtrl: ActionSheetController,
+    public route: ActivatedRoute,
     private platform: Platform) { 
 		if (this.platform.is('cordova')) {
       	this.loadMap();
@@ -38,6 +42,20 @@ export class LocalisationPage implements OnInit {
 		API_KEY_FOR_BROWSER_RELEASE: 'AIzaSyAeSk6OFtwx7z_BcLpB0x0NQdupp1rLdRE',
 		API_KEY_FOR_BROWSER_DEBUG: 'AIzaSyAeSk6OFtwx7z_BcLpB0x0NQdupp1rLdRE'
 	});
+  let latitude = Number(this.route.snapshot.paramMap.get('latitude'));
+  let longitude = Number(this.route.snapshot.paramMap.get('longitude'));
+    if((latitude != null) && (longitude != null)){
+  this.map = GoogleMaps.create('map', {
+    camera: {
+      target: {
+        lat: latitude,
+        lng: longitude
+      },
+      zoom: 16,
+      tilt: 30
+    }
+  });
+}else{
 	this.map = GoogleMaps.create('map', {
 		camera: {
 			target: {
@@ -48,6 +66,7 @@ export class LocalisationPage implements OnInit {
 			tilt: 30
 		}
 	});
+}
 }
 
 

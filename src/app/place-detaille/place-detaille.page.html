@@ -3,111 +3,85 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-input type="text" placeholder="Chercher une place"></ion-input>
-    <ion-icon name="search-outline" slot="end"></ion-icon>
+    <ion-icon name="search" slot="end"></ion-icon>
   </ion-toolbar>
-
-
 <ion-content [fullscreen]="true" >
-  <br>
-       <strong>
-        <ion-text color="primary">Bab Boudir</ion-text>
-       </strong>
- 
+<br>
+<strong>
 
-  <ion-item lines="none">
-          <img class="image"  src="assets/login.jpg" > 
-        <ion-label class="font">
-
-         	<ion-row>
-                 <h2 style="color: green ">Ville: </h2>
-
-                 <p style="color: black" >taza </p>
-            </ion-row>
-            <ion-row>
-                 <h2 style="color: green">Pays: </h2>
-                 <p style="color: black" >Maroc </p>
-            </ion-row>
-            <ion-row>
-                 <h2 style="color: green">Cordonnées: </h2>
-                 <p style="color: black" >10° 15° 18° nord </p>
-                 <p style="color: black" >4° 10° 00° ouest </p>
-            </ion-row>
-        </ion-label>
+  <div *ngFor="let image of images">
+  <ion-text class="titre">{{image.name}}</ion-text>
+  </div>
+</strong>
+<div *ngFor="let image of images">
+<ion-item lines="none">
+        <img class="image"  src="{{image.url}}" > 
+      <ion-label class="font">
+         <ion-row>
+               <h2  style="color: green ">Ville: </h2>
+               <p style="color: black" >{{image.ville}}</p>
+          </ion-row>
+          <ion-row>
+               <h2 style="color: green">Pays: </h2>
+               <p style="color: black" >{{image.pays}} </p>
+          </ion-row>
+          <ion-row>
+               <h2 style="color: green">Cordonnées: </h2>
+               <p style="color: black" >{{image.long}} </p>
+               <p style="color: black" >{{image.lat}} </p>
+          </ion-row>
+      </ion-label>
   </ion-item>
 
-        <strong>
-           <ion-text color="primary">Description:</ion-text>
-        </strong>
+      <strong>
+         <ion-text  class="titre">Description:</ion-text>
+      </strong>
 
-    <ion-item class="box-text" lines="none" >
-        <ion-text  class="ion-text-wrap" >
-      Bab boudir est une commune rural de la Province de Taza
-        </ion-text>
-    </ion-item>
+  <ion-item class="box-text" lines="none" >
+      <ion-text  class="ion-text-wrap" >
+        {{image.desc}}
+      </ion-text>
+  </ion-item>
+</div>
 
-        <strong>
-           <ion-text color="primary">Images:</ion-text>
-        </strong><br>
+      <strong>
+         <ion-text  class="titre">Images:</ion-text>
+      </strong><br>
+      <hr>
+      <ion-grid class="iongrid" >
+          <ion-row >
 
-        <ion-grid no-padding >
-            <ion-row >
-          <ion-col  >
-            <img class="grp-img" src="assets/login.jpg" >
-          </ion-col  >
-            <ion-col >
-            <img class="grp-img" src="assets/login.jpg" >
-          </ion-col >
-            <ion-col >
-            <img class="grp-img" src="assets/login.jpg" >
-          </ion-col >
-            <ion-col >
-            <img class="grp-img" src="assets/login.jpg" >
-          </ion-col >
-           <ion-col >
-            <img class="grp-img" src="assets/login.jpg" >
-          </ion-col >   
-          <ion-col>
-            <button>
-          <ion-icon color="primary"  name="add-outline"></ion-icon>
-            </button>
-          </ion-col>
-            </ion-row>
-        </ion-grid><br>
+            <div *ngFor="let image of images">
+               <ion-col  >
+          <img class="image1" src="{{image.url}}" >
+        </ion-col  >
+            </div>  
 
-    <footer>
-        <strong>
-           <ion-text color="primary">Suggestion:</ion-text>
-        </strong>
-        <ion-grid  >
-             <ion-row>
-          <ion-col >
+      
+          </ion-row>
+      </ion-grid><br>
 
-            <button  icon-only >
-           <ion-icon  name="partly-sunny"></ion-icon>
-            </button>
-          </ion-col>
-          <ion-col>
-            <button icon-only >
-           <ion-icon name="restaurant"></ion-icon>
-            </button>
-          </ion-col>
-          <ion-col>
-            <button icon-only >
-            <ion-icon name="location"></ion-icon> 
-            </button>         
-          </ion-col>
-          <ion-col>
-            <button icon-only >
-           <ion-icon name="bed"></ion-icon>
-            </button> 
+  <footer>
+      <strong>
+         <ion-text class="titre">Suggestion:</ion-text>
+      </strong>
+      <hr>
+      <ion-grid class="grid" >
+           <ion-row >
+        <ion-col >
+        <ion-button class="buttons" fill="clear"><ion-icon name="partly-sunny" class="icons"></ion-icon> </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="buttons"fill="clear"><ion-icon name="restaurant" class="icons"></ion-icon></ion-button>
+        </ion-col>
+        <ion-col *ngFor="let image of images">
+          <ion-button class="buttons"fill="clear" [routerLink] = "['/localisation',image.lat,image.long]"><ion-icon name="location" class="icons"></ion-icon>    </ion-button>      
+        </ion-col>
+        <ion-col>
+          <ion-button class="buttons"fill="clear"> <ion-icon name="bed" class="icons"></ion-icon> </ion-button>      
+        </ion-col>
+           </ion-row>
+      </ion-grid>
 
-          </ion-col>
-             </ion-row>
-        </ion-grid>
-    </footer>
-
+  </footer>
 </ion-content>
-
-<!-- <button color="white" icon-only #lock (mouseover)="lock.isHover = true" >
-    <ion-icon name="bed"></ion-icon>
-  </button> -->

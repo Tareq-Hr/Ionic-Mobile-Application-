@@ -12,11 +12,15 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {environment} from '../environments/environment';
 import { HttpClientModule } from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import { IonicStorageModule } from '@ionic/storage';
 import { AngularFireModule } from '@angular/fire'; // pour se connecter à Firebase
 import { AngularFireDatabaseModule } from '@angular/fire/database'; // pour manipuler la base de données Firebase
 import { AngularFireStorageModule } from '@angular/fire/storage'; // pour accéder aux fonction de stockage et de récupération des fichiers
 import { AngularFireAuthModule } from '@angular/fire/auth';
+
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+
 
 
 @NgModule({
@@ -27,11 +31,16 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     IonicModule.forRoot(),
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    HttpClientModule,
+    HttpClient,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
   ],
   bootstrap: [AppComponent]

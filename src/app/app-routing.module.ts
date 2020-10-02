@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-
+import { AuthGuard } from './guards/auth.guard';
 const routes: Routes = [
   {
     path: 'home',
@@ -19,7 +19,7 @@ const routes: Routes = [
 
   },
   {
-    path: 'place-detaille',
+    path: 'place-detaille/:id',
     loadChildren: () => import('./place-detaille/place-detaille.module').then( m => m.PlaceDetaillePageModule)
   },
   {
@@ -28,7 +28,7 @@ const routes: Routes = [
   },
  
   {
-    path: 'liste',
+    path: 'liste/:id',
     loadChildren: () => import('./liste/liste.module').then( m => m.ListePageModule)
   },
   {
@@ -37,7 +37,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'localisation',
+    path: 'localisation/:latitude/:longitude',
     loadChildren: () => import('./localisation/localisation.module').then( m => m.LocalisationPageModule)
   },
   {

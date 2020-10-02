@@ -13,30 +13,35 @@
   <strong>
     <ion-text color="primary">Accueil</ion-text>
   </strong>
- 
-<ion-card>
- <div>
-  <img src="assets/grottes.png" alt="Grottes" style="width:100%;">
-  <strong class="top-left">Grottes</strong>
-  <button class="bottom-left" [routerLink]= "['/liste-places']"><strong>Voir plus</strong></button>
-</div> 
-</ion-card>
+ <br> <br>
 
-<ion-card>
- <div>
-  <img src="assets/parcks.png" alt="Parcks" style="width:100%;">
-  <strong class="top-left">Parcks</strong>
-  <button class="bottom-left" [routerLink]= "['/liste-places']"><strong>Voir plus</strong></button>
-</div> 
-</ion-card>
 
-<ion-card>
+  <ion-slides [options]="slideOptions" pager="true" #slider (ionSlidesDidLoad)="slidesDidLoad(slider)">
+    <ion-slide *ngFor="let image of ImageArray">
+     <div> <img src="{{image.image}}" alt="Grottes" class="images"></div>
+      <strong class="top-left">Grottes</strong>
+  <button class="bottom-left" [routerLink]= "['/liste','grotte']"><strong>Voir plus</strong></button>
+    </ion-slide>
+  </ion-slides>
 
- <div>
-  <img src="assets/monuments.png" alt="Monuments" style="width:100%;">
-  <strong class="top-left">Monuments Historiques</strong>
-  <button class="bottom-left" [routerLink]= "['/liste-places']"><strong>Voir plus</strong></button>
-</div>
-</ion-card>
+  <br>
+
+  <ion-slides [options]="slideOptions" pager="true" #slider (ionSlidesDidLoad)="slidesDidLoad(slider)" auto-play="true">
+    <ion-slide *ngFor="let image2 of ImageArray2">
+     <div> <img src="{{image2.image2}}" alt="Grottes" class="images"></div>
+      <strong class="top-left">Parc</strong>
+  <button class="bottom-left" [routerLink]= "['/liste','Parc']"><strong>Voir plus</strong></button>
+    </ion-slide>
+  </ion-slides>
+
+  <br>
+
+  <ion-slides [options]="slideOptions" pager="true" #slider (ionSlidesDidLoad)="slidesDidLoad(slider)">
+    <ion-slide *ngFor="let image3 of ImageArray3">
+     <div> <img src="{{image3.image3}}" alt="Grottes" class="images"></div>
+      <strong class="top-left" style="left: 39%;font-size: 175%;top: 5%;">Monuments historiques</strong>
+  <button class="bottom-left" [routerLink]= "['/liste','monument_historique']"><strong>Voir plus</strong></button>
+    </ion-slide>
+  </ion-slides>
 
 </ion-content>

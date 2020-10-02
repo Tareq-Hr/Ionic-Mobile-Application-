@@ -1,7 +1,7 @@
 
 
 ion-text {
-  padding: 10px;
+  padding: 20px;
   font-size: 120%;
   font-style: bold;
 }
@@ -16,23 +16,26 @@ ion-text {
   line-height: 40px;
   position: absolute;
   top: 15%;
-  left: 5%;
-  right: 10%;
+  margin-left: -40%;
+  margin-top: 15%;
+
 }
 
 button.bottom-left { 
   width: 25%;
   height: 15%;
-  text-align: center;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  font-size: 110%;
+  font-size: 90%;
   color: white;
   background-color: #167016;
   position: absolute;
   bottom: 15%;
-  left: 5%;
+  left: 10%;
   border: 2px solid none;
   border-radius: 10px;
 }
 
+.images{
+  width: 90%;
+  height: 70%;
+  border-radius: 10%;
+}

@@ -2,14 +2,17 @@ import { Component , OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { User } from '../shared/user.class';
+
 import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
+
 @Component({
   selector: 'app-inscription',
   templateUrl: './inscription.page.html',
   styleUrls: ['./inscription.page.scss'],
 })
 export class InscriptionPage implements OnInit {
+
   login: FormGroup;
   showPassword = false;
   loading: any;
@@ -95,11 +98,6 @@ export class InscriptionPage implements OnInit {
       console.log('successuflly');
       this.router.navigateByUrl('/');
     }
-      
-
-
-    
-    
   }
 
   

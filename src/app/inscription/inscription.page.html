@@ -17,6 +17,7 @@
 	<ion-item class="item">
 		<ion-label color="light"></ion-label>
 		<ion-input color="light" placeholder="Adresse E-mail" type="email" [(ngModel)]="user.email" formControlName="email" ></ion-input >
+
 		<ion-icon color="medium"name="checkmark" ></ion-icon>
 
 	</ion-item>  
@@ -38,6 +39,7 @@
 	</ion-item>
 	<br/>
 	<ion-button  expand="block" (click)="onRegister()" type="submit" [disabled]="!login.valid">Connexion </ion-button>
+
 	
 </form>	
 	<ion-item class="item1" lines="none" >
