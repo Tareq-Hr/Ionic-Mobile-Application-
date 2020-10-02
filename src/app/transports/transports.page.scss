@@ -23,9 +23,26 @@ height: 50%;
     height: 30%;
 }
 
-ion-label{
+ion-card-title{
 
-    margin: 20%;
+    margin: 5%;
     color: #CE9C5A;
 
+}
+img{
+    height:50% ; 
+    display: block;
+    width: 50%;
+    right: 50%;
+    left: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.time{
+    position:absolute;
+     left:0; 
+}
+.Location{
+    position:absolute;
+    right:0; 
 }
