@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { User } from '../shared/user.class';
 
+import { AlertController } from '@ionic/angular';  
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -16,7 +18,8 @@ export class LoginPage implements OnInit{
   passwordToggleIcon='eye';
 
 
-  constructor(private router: Router, private authSvc: AuthService) {}
+  constructor(public alertCtrl: AlertController, private router: Router, private authSvc: AuthService) {}
+
 
   ngOnInit() {}
 
@@ -37,9 +40,21 @@ export class LoginPage implements OnInit{
     if (user) {
       console.log('successuflly login');
       this.router.navigateByUrl('/');
+
+    }else {
+       const alert = await this.alertCtrl.create({ 
+        cssClass:'my-custom-class',   
+        message: 'Email ou password est Incorrect',  
+      });  
+      await alert.present();  
+      const result = await alert.onDidDismiss();  
+      console.log(result);  
+
+
     }
 
 
   }
+
 }
 

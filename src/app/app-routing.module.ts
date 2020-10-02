@@ -65,6 +65,10 @@ const routes: Routes = [
     path: 'liste-places',
     loadChildren: () => import('./liste-places/liste-places.module').then( m => m.ListePlacesPageModule)
   },
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)
+  },
   
 ];
 

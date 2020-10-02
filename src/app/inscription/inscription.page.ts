@@ -3,22 +3,67 @@ import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { User } from '../shared/user.class';
 
+import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { AlertController } from '@ionic/angular';
+
 @Component({
   selector: 'app-inscription',
   templateUrl: './inscription.page.html',
   styleUrls: ['./inscription.page.scss'],
 })
 export class InscriptionPage implements OnInit {
-  user: User = new User();
+
+  login: FormGroup;
   showPassword = false;
+  loading: any;
+  user: User = new User();
   passwordToggleIcon='eye';
   showPassword1 = false;
   passwordToggleIcon1='eye';
+  validations_form: FormGroup;
+  errorMessage: string = '';
 
-  constructor(private authSvc: AuthService, private router: Router) {}
+  constructor(public alertCtrl: AlertController, private authSvc: AuthService, private router: Router, private fb: FormBuilder) {
+
+        this.login = this.fb.group({
+            email: new FormControl('', Validators.compose([
+                Validators.required,
+                Validators.minLength(6),
+                //Validators.maxLength(20),
+                Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
+            ])),
+            password: new FormControl('', Validators.compose([
+                Validators.required,
+                Validators.minLength(8),
+                //Validators.maxLength(20),
+                Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}$')
+            ])),
+        });
+
+
+
+  }
+  validation_messages = {
+    'email': [
+      { type: 'required', message: 'Email is required.' },
+      { type: 'pattern', message: 'Please enter a valid email.' }
+    ],
+    'password': [
+      { type: 'required', message: 'Password is required.' },
+      { type: 'minlength', message: 'Password must be at least 5 characters long.' }
+    ]
+  };
 
   ngOnInit() {}
+  formSubmit(login) {
+        console.log('test: ', login);
+  }
 
+  togglePasswordText() {
+        console.log('togglePasswordText: ', this.showPassword);
+
+        this.showPassword = !this.showPassword;
+    }
 
 
   togglePassword(): void {
@@ -53,7 +98,6 @@ export class InscriptionPage implements OnInit {
       console.log('successuflly');
       this.router.navigateByUrl('/');
     }
-    
   }
 
   
