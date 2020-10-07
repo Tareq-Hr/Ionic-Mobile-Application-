@@ -45,19 +45,18 @@ ion-checkbox{
 	right: 20%;
 	height:70%;
 }
+.titre{
+
+	font-size:35px;
+	color:#fefefe;
+}
 .title{
 	height: 240px;
 }
-ion-title{
 
-   height: 56%;
-   color: #f5f6f9;
-   font-size:1.7em;
-   text-align: center;
-}
 .footer{
 	position: absolute;
-	bottom:7%;
+	bottom:3%;
 	 left: 0;
   	right: 0;
   	}
@@ -71,3 +70,18 @@ ion-title{
    
 
 }
+.logo{
+	height: 250px;
+	position: relative;
+	color:#d6d0d0;
+	   
+   }
+.logo ion-icon{
+	   position: absolute;
+	   font-size: 7em;
+	   top: 50%;
+	   left: 50%;
+	   transform: translate(-50%, -50%);
+	   color:#d6d0d0;
+   
+   }

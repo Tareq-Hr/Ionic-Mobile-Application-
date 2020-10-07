@@ -5,46 +5,54 @@
 </section>
 <br/>
 <div class="padding" >
-	
 	<div text-center class="logo">
 		<ion-title  class="titre" align="center" color="medium" >Créer Un Compte</ion-title>
 		<ion-icon color="medium" name="person-circle-outline"></ion-icon>
-
-
     </div>
-
 <form class="form" [formGroup]="login">
 	<ion-item class="item">
 		<ion-label color="light"></ion-label>
 		<ion-input color="light" placeholder="Adresse E-mail" type="email" [(ngModel)]="user.email" formControlName="email" ></ion-input >
-
 		<ion-icon color="medium"name="checkmark" ></ion-icon>
-
 	</ion-item>  
-
 	<br/>
-
+	<ion-item class="item3" *ngIf="login.get('email').hasError('required') || login.get('email').hasError('email') || login.get('email').hasError('minlength')">
+		<span *ngIf="login.get('email').hasError('required')">Email est requis</span>	
+		<span *ngIf="login.get('email').hasError('email')">Veuillez saisir un e-mail valide</span>
+		<span *ngIf="login.get('email').hasError('minlength')">Plus de 8 Caractères</span>
+	</ion-item>
+    <br/>
 	<ion-item class="item" >
-		
 		<ion-label color="light"></ion-label>
-		<ion-input name="password" color="light" placeholder="Mot de passe" [type]="showPassword ? 'text' : 'password' " [(ngModel)]="user.password" formControlName="password" required></ion-input>
+		<ion-input name="password" color="light" placeholder="Mot de passe" [type]="showPassword ? 'text' : 'password' " [(ngModel)]="user.password" formControlName="password"  required></ion-input>
 		 <ion-icon  color="medium" [name]="passwordToggleIcon" (click)="togglePassword()"></ion-icon>
 	</ion-item>
 	<br/>
-
+	<ion-item class="item3" *ngIf="login.get('password').hasError('required') || login.get('password').hasError('pattern')">
+		<span *ngIf="login.get('password').hasError('required')">Mot de passe est requis</span>	
+		<span *ngIf="login.get('password').hasError('pattern')">Veuillez saisir un mot de passe robuste</span>
+	</ion-item>
+	<br/>
 	<ion-item class="item" >
 		<ion-label color="light"></ion-label>
-		<ion-input color="light" placeholder="Confirmer mot de passe" name="password-repeat" [type]="showPassword1 ? 'text' : 'password' "  formControlName="password" required></ion-input>
+		<ion-input color="light" placeholder="Confirmer mot de passe" name="password-repeat" [type]="showPassword1 ? 'text' : 'password' " [(ngModel)]="user.confirmPassword" formControlName="confirmPassword" compare-password="password-repeat" required></ion-input>
 		 <ion-icon  color="medium" [name]="passwordToggleIcon1" (click)="togglePassword1()"></ion-icon>
+	</ion-item>
+	<br/>
+	<ion-item class="item3" *ngIf="login.get('confirmPassword').hasError('required') || !notSame ">
+		<span *ngIf="login.get('confirmPassword').hasError('required')">Confirmation est requis</span>	
+		<span *ngIf="!notSame">not sam</span>
 	</ion-item>
 	<br/>
 	<ion-button  expand="block" (click)="onRegister()" type="submit" [disabled]="!login.valid">Connexion </ion-button>
 
 	
 </form>	
-	<ion-item class="item1" lines="none" >
-		<ion-label text-center color="medium">Vous avez déjà connecter?</ion-label>
-		<ion-button color="primary"class="btn" fill="clear" [routerLink]= "['/login']">Connecter vous</ion-button>
-	</ion-item>
 </div>
+<footer class="footer">
+<ion-item class="item1" lines="none" >
+	<ion-label text-center color="medium">Vous avez déjà connecter?</ion-label>
+	<ion-button color="primary"class="btn" fill="clear" [routerLink]= "['/login']">Connecter vous</ion-button>
+</ion-item>
+</footer>
 </ion-content>
