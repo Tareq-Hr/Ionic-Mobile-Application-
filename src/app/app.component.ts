@@ -52,6 +52,11 @@ export class AppComponent {
       title: 'Places Locals',
       url: '/liste-places',
       icon: 'image-outline'
+    },
+    {
+      title: 'Déconnexion',
+      url: '/login',
+      icon: 'log-out-outline'
     }
 
   ];

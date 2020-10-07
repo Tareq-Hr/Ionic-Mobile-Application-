@@ -55,7 +55,7 @@ export class LocalisationPage implements OnInit {
       tilt: 30
     }
   });
-}else{
+}else if((latitude == null) && (longitude == null)){
 	this.map = GoogleMaps.create('map', {
 		camera: {
 			target: {

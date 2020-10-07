@@ -3,8 +3,8 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-input type="text" placeholder="Chercher une place"></ion-input>
-    <ion-icon name="search-outline" slot="end"></ion-icon>
+    <ion-input type="text" placeholder="Chercher une Pharmacie" [(ngModel)] = "searchTerm"></ion-input>
+    <ion-buttons slot="end" (click)="getImagesDatabase()"><ion-icon name="search" slot="end"></ion-icon></ion-buttons>
   </ion-toolbar>
 
 
