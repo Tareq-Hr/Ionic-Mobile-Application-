@@ -5,7 +5,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { InscriptionPageRoutingModule } from './inscription-routing.module';
 import { RouterModule } from '@angular/router';
-
+import {ValidateEqualModule} from 'ng-validate-equal';
 import { InscriptionPage } from './inscription.page';
 
 @NgModule({
@@ -14,6 +14,7 @@ import { InscriptionPage } from './inscription.page';
     ReactiveFormsModule,
     FormsModule,
     IonicModule,
+    ValidateEqualModule,
     InscriptionPageRoutingModule,
     RouterModule.forChild([
       {

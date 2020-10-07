@@ -2,10 +2,9 @@ import { Component , OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { User } from '../shared/user.class';
-
 import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
-
+import { from } from 'rxjs';
 @Component({
   selector: 'app-inscription',
   templateUrl: './inscription.page.html',
@@ -28,9 +27,10 @@ export class InscriptionPage implements OnInit {
         this.login = this.fb.group({
             email: new FormControl('', Validators.compose([
                 Validators.required,
-                Validators.minLength(6),
+                Validators.minLength(8),
                 //Validators.maxLength(20),
-                Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
+                Validators.email,
+                //Validators.pattern('^[a-zA-Z0-9]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$')
             ])),
             password: new FormControl('', Validators.compose([
                 Validators.required,
@@ -38,22 +38,19 @@ export class InscriptionPage implements OnInit {
                 //Validators.maxLength(20),
                 Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}$')
             ])),
+            confirmPassword:new FormControl('', Validators.compose([
+              Validators.required,           
+            ])),
         });
 
 
 
   }
-  validation_messages = {
-    'email': [
-      { type: 'required', message: 'Email is required.' },
-      { type: 'pattern', message: 'Please enter a valid email.' }
-    ],
-    'password': [
-      { type: 'required', message: 'Password is required.' },
-      { type: 'minlength', message: 'Password must be at least 5 characters long.' }
-    ]
-  };
-
+  checkPasswords(group: FormGroup) { // here we have the 'passwords' group
+  let pass = group.get('password').value;
+  let confirmPass = group.get('confirmPassword').value;
+  return pass === confirmPass ? null : { notSame: true }     
+}
   ngOnInit() {}
   formSubmit(login) {
         console.log('test: ', login);
@@ -64,7 +61,6 @@ export class InscriptionPage implements OnInit {
 
         this.showPassword = !this.showPassword;
     }
-
 
   togglePassword(): void {
     this.showPassword = this.showPassword;
@@ -90,16 +86,41 @@ export class InscriptionPage implements OnInit {
     }
     
   }
+ MustMatch(controlName: string, matchingControlName: string) {
+    return (formGroup: FormGroup) => {
+        const control = formGroup.controls[controlName];
+        const matchingControl = formGroup.controls[matchingControlName];
 
+        if (matchingControl.errors && !matchingControl.errors.mustMatch) {
+            // return if another validator has already found an error on the matchingControl
+            return;
+        }
+
+        // set error on matchingControl if validation fails
+        if (control.value !== matchingControl.value) {
+            matchingControl.setErrors({ mustMatch: true });
+        } else {
+            matchingControl.setErrors(null);
+        }
+    }
+}
   async onRegister(){
     const user = await this.authSvc.onRegister(this.user);
     
     if(user) {
       console.log('successuflly');
-      this.router.navigateByUrl('/');
+      this.router.navigateByUrl('login');
     }
+    else {
+      const alert = await this.alertCtrl.create({ 
+       cssClass:'my-custom-class',   
+       message: 'Confirmez le mote de passe',  
+     });  
+     await alert.present();  
+     const result = await alert.onDidDismiss();  
+     console.log(result);  
   }
-
+  }
   
 
 }
