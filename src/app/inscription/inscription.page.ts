@@ -29,8 +29,8 @@ export class InscriptionPage implements OnInit {
                 Validators.required,
                 Validators.minLength(8),
                 //Validators.maxLength(20),
-                Validators.email,
-                //Validators.pattern('^[a-zA-Z0-9]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$')
+                //Validators.email,
+                Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')
             ])),
             password: new FormControl('', Validators.compose([
                 Validators.required,
@@ -114,7 +114,7 @@ export class InscriptionPage implements OnInit {
     else {
       const alert = await this.alertCtrl.create({ 
        cssClass:'my-custom-class',   
-       message: 'Confirmez le mote de passe',  
+       message: 'E-mail déja existe',  
      });  
      await alert.present();  
      const result = await alert.onDidDismiss();  
