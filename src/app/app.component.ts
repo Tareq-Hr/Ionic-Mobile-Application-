@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
@@ -52,6 +51,11 @@ export class AppComponent {
       title: 'Places Locals',
       url: '/liste-places',
       icon: 'image-outline'
+    },
+    {
+      title: 'Déconnexion',
+      url: '/login',
+      icon: 'log-out-outline'
     }
 
   ];

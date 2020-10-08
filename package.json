@@ -32,6 +32,7 @@
     "cordova-browser": "6.0.0",
     "cordova-plugin-googlemaps": "^2.7.1",
     "firebase": "^7.22.1",
+    "ng-validate-equal": "^1.0.4",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"

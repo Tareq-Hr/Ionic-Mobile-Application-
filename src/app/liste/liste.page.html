@@ -2,13 +2,13 @@
   <ion-buttons slot="start">
     <ion-menu-button></ion-menu-button>
   </ion-buttons>
-  <ion-input type="text" placeholder="Chercher une place"></ion-input>
-  <ion-icon name="search" slot="end"></ion-icon>
+  <ion-input type="text" placeholder="Chercher une place" [(ngModel)] = "searchTerm" ></ion-input>
+  <ion-buttons slot="end" (click)="getImagesDatabase()"><ion-icon name="search" slot="end"></ion-icon></ion-buttons>
 </ion-toolbar>
 <ion-content [fullscreen]="true">
   <br>
 <strong>
-  <ion-text color="secondary">Places</ion-text>
+  <ion-text color="secondary"></ion-text>
 </strong>
   <div *ngFor="let image of images">
   <ion-card>

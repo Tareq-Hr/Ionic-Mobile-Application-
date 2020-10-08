@@ -3,12 +3,15 @@
   <section >
     <div class="overlay"></div>  
   </section>
+  <br/>
   <div class="padding">
+    <div text-center class="logo">
 
-  <div class="title"> 
-    <ion-title >Login</ion-title>
-  </div>
-
+      <ion-title  class="titre" align="center" color="medium">Connexion</ion-title>
+      
+      <ion-icon color="medium" name="person-circle-outline"></ion-icon>
+      </div>
+  
   <ion-item class="input"> 
   	<ion-icon color="medium" class="icon1" name="person" ></ion-icon>
     <ion-input color="medium"  type="email" placeholder="adresse e-mail"  [(ngModel)]="user.email"></ion-input>
@@ -18,21 +21,18 @@
 
   <ion-item class="input">
   	<ion-icon color="medium"  name="lock-closed"  ></ion-icon>
-    <ion-input color="medium"  type="password" placeholder="Mot de passe" [(ngModel)]="user.password"></ion-input>
-    <ion-icon  color="medium" name="eye"  slot="end"></ion-icon>	
+    <ion-input color="medium"  [type]="showPassword ? 'text' : 'password' " placeholder="Mot de passe" [(ngModel)]="user.password"></ion-input>
+    <ion-icon  color="medium" [name]="passwordToggleIcon" (click)="togglePassword()"></ion-icon>
   </ion-item><br>
 
   <ion-button class="butt-conn" (click)="onLogin()" expand="block">Connexion</ion-button>
-
-  <ion-item lines="none" class="footer"> 
-
-    <ion-label class="format"  color="light" >Vous avez pas un compte? </ion-label>
-    <ion-button  [routerLink]= "['/inscription']" class="butt-auth" color= "green"  slot="end" fill="clear" >S'inscrire</ion-button>
-    
-  </ion-item>
-
   </div>
-
+  <footer class="footer">
+    <ion-item class="item1" lines="none" >
+      <ion-label text-center color="medium">Vous n'avez pas un compte?</ion-label>
+      <ion-button [routerLink]= "['/inscription']" color="primary"class="btn" fill="clear">S'inscrire</ion-button>
+    </ion-item>
+    </footer>
 </ion-content>
 
 
