@@ -4,9 +4,11 @@
   <div *ngIf="weather">  
  <ion-card>
      <img src= "{{weather.current.weather_icons}}" style="width:100%"/>
-     <ion-buttons style="position: absolute; top: 0%"[routerLink]= "['/home']" >
+
+  <ion-back-button defaultHref="/" style="position: absolute; top: 0%" >
 	  <ion-icon name="arrow-back-outline" slot="start" style="color: white; font-size: 24px;"></ion-icon>
-	 </ion-buttons>
+	</ion-back-button>
+  
  <div>
      <p class="top-right">{{weather.current.temperature}}°</p>
      <p><strong class="weather_descriptions">{{weather.current.weather_descriptions}}</strong></p> 
