@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireStorage} from '@angular/fire/storage';
 import { AngularFireDatabase } from '@angular/fire/database';
+import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-pharmacie',
@@ -16,12 +18,13 @@ export class PharmaciePage implements OnInit {
     icon:"assets/path.png"
   }*/
   images = [];
+  public searchTerm:string = "";
   constructor(
     public afSG: AngularFireStorage,
     public afDB: AngularFireDatabase
     
   ) {
-    this.getImagesDatabase();
+
   }
 
 
@@ -34,11 +37,13 @@ getImagesDatabase() {
   });
 }
 
-getImagesStorage(image: any) {
+  getImagesStorage(image: any) {
+  this.images = [];
   const imgRef = image.payload.exportVal().images;
   this.afSG.ref(imgRef).getDownloadURL().subscribe(imgUrl => {
     console.log(imgUrl);
      if(image.payload.exportVal().categorie == 'pharmacie'){
+      if(this.searchTerm == ""){
     this.images.push({
       name: image.payload.exportVal().titre,
       url: imgUrl,
@@ -46,11 +51,26 @@ getImagesStorage(image: any) {
       long: image.payload.exportVal().longitude,
       lat: image.payload.exportVal().latitude
     });
-  }
+  }else if(image.payload.exportVal().titre.toLowerCase().includes(this.searchTerm.toLowerCase())){
+      
+      this.images = [];
+      const imgRef = image.payload.exportVal().images;
+      this.afSG.ref(imgRef).getDownloadURL().subscribe(imgUrl => {
+    console.log(imgUrl);
+    this.images.push({
+      name: image.payload.exportVal().titre,
+      url: imgUrl,
+      adresse: image.payload.exportVal().adresse,
+      long: image.payload.exportVal().longitude,
+      lat: image.payload.exportVal().latitude
+    });
   });
+  }
 }
-
+});
+ }
   ngOnInit() {
+    this.getImagesDatabase();
   }
 
 }

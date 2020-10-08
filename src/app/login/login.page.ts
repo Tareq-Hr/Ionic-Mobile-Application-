@@ -22,7 +22,11 @@ export class LoginPage implements OnInit{
 
 
   ngOnInit() {}
+  togglePasswordText() {
+    console.log('togglePasswordText: ', this.showPassword);
 
+    this.showPassword = !this.showPassword;
+}
   togglePassword(): void {
     this.showPassword = this.showPassword;
 
@@ -33,13 +37,13 @@ export class LoginPage implements OnInit{
         this.showPassword = false;
         this.passwordToggleIcon = 'eye';
     }
-  }
 
+  }
   async onLogin() {
     const user = await this.authSvc.onLogin(this.user);
     if (user) {
       console.log('successuflly login');
-      this.router.navigateByUrl('/');
+      this.router.navigateByUrl('home');
 
     }else {
        const alert = await this.alertCtrl.create({ 

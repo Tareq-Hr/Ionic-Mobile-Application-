@@ -8,7 +8,6 @@ section{
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
-	background-attachement: fixed;
 }
 .overlay{
 	position: absolute;
@@ -20,7 +19,7 @@ section{
 }
 .titre{
 	font-size:35px;
-	color:#918e8e;
+	color:#ffffff;
 }
 
 .item1{
@@ -30,12 +29,14 @@ section{
 .item{
    --ion-background-color: 	#000000;
 }
-	
+.item3{
+	--ion-background-color: 	#f5f5f5;
+ }
 .padding {
-    padding: 5%!important;
+    padding: 3%!important;
 }
 .logo{
- height: 250px;
+ height: 220px;
  position: relative;
  color:#d6d0d0;
 	
@@ -53,3 +54,18 @@ section{
     --backdrop-opacity: 0.2;
     --background: linear-gradient(90deg, rgba(165, 255, 192, 1) 1%, rgba(0, 212, 255, 1) 100%);
 }
+
+.footer{
+	position: fixed;
+	bottom:3%;
+	 left: 0;
+	  right: 0;
+	  }
+span{
+	color:#cb0808;
+	height: 20px;
+}
+form{
+	padding-bottom: 5%;
+
+	}
