@@ -39,7 +39,8 @@ export class InscriptionPage implements OnInit {
                 Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}$')
             ])),
             confirmPassword:new FormControl('', Validators.compose([
-              Validators.required,           
+              Validators.required,  
+              Validators.minLength(8)  
             ])),
         });
 

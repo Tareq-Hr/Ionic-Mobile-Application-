@@ -24,7 +24,7 @@
     <br/>
 	<ion-item class="item" >
 		<ion-label color="light"></ion-label>
-		<ion-input name="password" color="light" placeholder="Mot de passe" [type]="showPassword ? 'text' : 'password' " [(ngModel)]="user.password" formControlName="password"  required></ion-input>
+		<ion-input name="password" color="light" placeholder="Mot de passe" [type]="showPassword ? 'text' : 'password' " [(ngModel)]="user.password" formControlName="password" required></ion-input>
 		 <ion-icon  color="medium" [name]="passwordToggleIcon" (click)="togglePassword()"></ion-icon>
 	</ion-item>
 	<br/>
@@ -35,7 +35,7 @@
 	<br/>
 	<ion-item class="item" >
 		<ion-label color="light"></ion-label>
-		<ion-input color="light" placeholder="Confirmer mot de passe" name="password-repeat" [type]="showPassword1 ? 'text' : 'password' " [(ngModel)]="user.confirmPassword" formControlName="confirmPassword" compare-password="password-repeat" required></ion-input>
+		<ion-input color="light" placeholder="Confirmer mot de passe" name="password-repeat" [type]="showPassword1 ? 'text' : 'password' " [(ngModel)]="user.confirmPassword" formControlName="confirmPassword" required></ion-input>
 		 <ion-icon  color="medium" [name]="passwordToggleIcon1" (click)="togglePassword1()"></ion-icon>
 	</ion-item>
 	<br/>
