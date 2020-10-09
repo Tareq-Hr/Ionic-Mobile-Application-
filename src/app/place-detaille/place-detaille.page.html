@@ -63,22 +63,13 @@
 
   <footer >
       <strong>
-         <ion-text class="titre">Suggestion</ion-text>
+         <ion-text class="titre">Localisation</ion-text>
       </strong>
       <hr>
       <ion-grid class="grid" >
            <ion-row >
-        <ion-col >
-        <ion-button class="buttons" fill="clear"><ion-icon name="partly-sunny" class="icons"></ion-icon> </ion-button>
-        </ion-col>
-        <ion-col>
-          <ion-button class="buttons"fill="clear"><ion-icon name="restaurant" class="icons"></ion-icon></ion-button>
-        </ion-col>
         <ion-col *ngFor="let image of images">
           <ion-button class="buttons"fill="clear" [routerLink] = "['/localisation',image.lat,image.long]"><ion-icon name="location" class="icons"></ion-icon>    </ion-button>      
-        </ion-col>
-        <ion-col>
-          <ion-button class="buttons"fill="clear"> <ion-icon name="bed" class="icons"></ion-icon> </ion-button>      
         </ion-col>
            </ion-row>
       </ion-grid>

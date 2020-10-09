@@ -6,7 +6,7 @@
 <br/>
 <div class="padding" >
 	<div text-center class="logo">
-		<ion-title  class="titre" align="center" color="medium" >Créer un compte</ion-title>
+		<center><ion-title  class="titre" align="center" color="medium" >Créer un compte</ion-title></center>
 		<ion-icon color="medium" name="person-circle-outline"></ion-icon>
     </div>
 <form class="form" [formGroup]="login">
@@ -48,17 +48,11 @@
 
 	
 </form>	
-
-	<ion-item class="item1" lines="none" >
-		<ion-label text-center color="medium">Vous avez déjà connecté?</ion-label>
-		<ion-button color="primary"class="btn" fill="clear" [routerLink]= "['/login']">Connectez-vous</ion-button>
-	</ion-item>
-
 </div>
 <footer class="footer">
 <ion-item class="item1" lines="none" >
-	<ion-label text-center color="medium">Vous avez déjà connecter?</ion-label>
-	<ion-button color="primary"class="btn" fill="clear" [routerLink]= "['/login']">Connecter vous</ion-button>
+	<ion-label text-center color="medium">Vous avez déjà un compte ?</ion-label>
+	<ion-button color="primary"class="btn" fill="clear" [routerLink]= "['/login']">Connectez-vous</ion-button>
 </ion-item>
 </footer>
 </ion-content>
