@@ -10,12 +10,7 @@
 
 <ion-content [fullscreen]="true">
   <br>
-  <strong>
-    <ion-text color="primary">Accueil</ion-text>
-  </strong>
-<br> <br>
-
-
+  
   <ion-slides [options]="slideOptions" pager="true" #slider (ionSlidesDidLoad)="slidesDidLoad(slider)">
     <ion-slide *ngFor="let image of ImageArray">
      <div> <img src="{{image.image}}" alt="Grottes" class="images"></div>
