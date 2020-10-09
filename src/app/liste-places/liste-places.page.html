@@ -11,8 +11,8 @@
 <ion-card *ngFor="let image of images">
  <div>
   <img src="{{image.url}}" alt="{{image.name}}" style="width:100%;height: 85%; display: block;">
-  <strong class="top-left">{{image.name}}</strong>
-  <button class="bottom-left" [routerLink]=  "['/place-detaille',image.name]"><strong>Voir plus</strong></button>
+  <strong  class="top-left">{{image.name}}</strong>
+  <button  class="bottom-left" [routerLink]=  "['/place-detaille',image.name]"><strong>Voir plus</strong></button>
 </div> 
 </ion-card>
 
