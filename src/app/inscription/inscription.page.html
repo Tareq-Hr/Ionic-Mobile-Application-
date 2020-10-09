@@ -12,14 +12,14 @@
 <form class="form" [formGroup]="login">
 	<ion-item class="item">
 		<ion-label color="light"></ion-label>
-		<ion-input color="light" placeholder="Adresse E-mail" type="email" [(ngModel)]="user.email" formControlName="email" ></ion-input >
+		<ion-input color="light" placeholder="Adresse E-mail" type="email" [(ngModel)]="user.email" formControlName="email" required></ion-input >
 		<ion-icon color="medium"name="checkmark" ></ion-icon>
 	</ion-item>  
 	<br/>
-	<ion-item class="item3" *ngIf="login.get('email').hasError('required') || login.get('email').hasError('email') || login.get('email').hasError('minlength')">
+	<ion-item class="item3" *ngIf="login.get('email').hasError('required') || login.get('email').hasError('pattern') || login.get('email').hasError('minlength')">
 		<span *ngIf="login.get('email').hasError('required')">Email est requis</span>	
-		<span *ngIf="login.get('email').hasError('email')">Veuillez saisir un e-mail valide</span>
-		<span *ngIf="login.get('email').hasError('minlength')">Plus de 8 Caractères</span>
+		<span *ngIf="login.get('email').hasError('pattern')">Veuillez saisir un e-mail valide<br/></span>
+		<span *ngIf="login.get('email').hasError('minlength')">( Plus de 8 Caractères)</span>
 	</ion-item>
     <br/>
 	<ion-item class="item" >
@@ -39,9 +39,9 @@
 		 <ion-icon  color="medium" [name]="passwordToggleIcon1" (click)="togglePassword1()"></ion-icon>
 	</ion-item>
 	<br/>
-	<ion-item class="item3" *ngIf="login.get('confirmPassword').hasError('required') || !notSame ">
+	<ion-item class="item3" *ngIf="login.get('confirmPassword').hasError('required') || checkPasswords(login)">
 		<span *ngIf="login.get('confirmPassword').hasError('required')">Confirmation est requis</span>	
-		<span *ngIf="!notSame">not sam</span>
+		<span *ngIf="checkPasswords(login)">le mot de passe ne correspond pas</span>
 	</ion-item>
 	<br/>
 	<ion-button  expand="block" (click)="onRegister()" type="submit" [disabled]="!login.valid">Connexion </ion-button>
