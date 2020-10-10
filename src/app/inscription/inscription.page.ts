@@ -110,7 +110,7 @@ export class InscriptionPage implements OnInit {
     
     if(user) {
       console.log('successuflly');
-      this.router.navigateByUrl('home');
+      this.router.navigateByUrl('login');
     }
     else {
       const alert = await this.alertCtrl.create({ 
