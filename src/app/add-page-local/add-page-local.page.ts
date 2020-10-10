@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 
 import { AngularFireStorage, AngularFireUploadTask } from '@angular/fire/storage';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
@@ -6,6 +6,8 @@ import { AngularFireDatabase} from '@angular/fire/database';
 
 import { Observable } from 'rxjs';
 import { finalize, tap } from 'rxjs/operators';
+
+import { FormsModule } from '@angular/forms';
 
 export interface MyData {
   name: string;
@@ -21,9 +23,9 @@ export interface MyData {
 export class AddPageLocalPage implements OnInit {
 
 	//get input variables
-	titre: string;
-	description: string;
-	adresse: string;
+	public titre: string="";
+	public description: string="";
+	public adresse: string="";
 
   // Upload Task 
   task: AngularFireUploadTask;
@@ -49,6 +51,8 @@ export class AddPageLocalPage implements OnInit {
   isUploaded:boolean;
 
   private imageCollection: AngularFirestoreCollection<MyData>;
+
+  
   constructor(private storage: AngularFireStorage, 
   	private database: AngularFirestore, 
   	public afDB : AngularFireDatabase) {
@@ -132,10 +136,10 @@ export class AddPageLocalPage implements OnInit {
   	{
   		ville: 'Taza',
   		pays: 'Maroc',
-  		titre: document.getElementById("titre"),
-  		adresse: document.getElementById('adresse'),
-  		mots_cles: document.getElementById('titre'),
-  		description: document.getElementById('description'),
+  		titre: this.titre,
+  		adresse: this.adresse,
+  		mots_cles: this.titre,
+  		description:this.description,
   		images: `/PlacesLocals/${this.fileName}`
    	});
 }

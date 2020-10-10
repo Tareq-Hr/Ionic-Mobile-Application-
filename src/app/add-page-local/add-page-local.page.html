@@ -45,13 +45,13 @@
 
  <ion-content>
 
-<ion-input id= "titre" placeholder="Titre"></ion-input>
+<ion-input  id= "titre" placeholder="Titre" [(ngModel)]="titre"></ion-input>
 
 <br>
-<ion-input id= "description" placeholder="Description"></ion-input>
+<ion-input id= "description" placeholder="Description" [(ngModel)]="description"></ion-input>
 
 <br>
-<ion-input id= "adresse" placeholder="Localisation">
+<ion-input id= "adresse" placeholder="Localisation" [(ngModel)]="adresse">
 	<ion-icon name="location" style="position: absolute; right: 3%" [routerLink]= "['/localisation/34.2199201/-3.99871']"></ion-icon>
 </ion-input>
 
